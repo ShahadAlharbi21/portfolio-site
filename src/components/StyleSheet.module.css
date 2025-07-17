@@ -1,0 +1,47 @@
+.skillsSection {
+  margin-top: 3rem;
+  text-align: center;
+}
+.skillsCard h2,
+.skillsCard h3,
+.skillsCard p {
+  color: white;
+}
+
+.skillsCard {
+  background-color: var(--card-bg, #0a192f);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skillGroup {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  background-color: #444;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.badgeImage {
+  border-radius: 6px; 
+  height: 28px;
+  vertical-align: middle;
+}
+
