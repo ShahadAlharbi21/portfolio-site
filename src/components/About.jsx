@@ -19,12 +19,10 @@ function About() {
             <b>Shahad Alharbi</b>
         </h1>
         <h2>
-            Computer Science student at the University of Manchester.
+            <b>Computer Science student at the University of Manchester.</b>
         </h2>
-        <div>
-            <p>I’m currently in my final year of a Computer Science degree at the University of Manchester, supported by a competitive scholarship from NEOM.</p>
-            <p>Throughout my studies, I’ve developed strong programming skills, demonstrated through various solo and coursework projects.</p>
-            <p>I’m especially interested in Data Science and Machine Learning.</p>
+        <div className={styles.limitWidth}>
+            <p>I’m currently in my final year of a Computer Science degree at the University of Manchester, supported by a competitive scholarship from NEOM. Throughout my studies, I’ve developed strong programming skills, demonstrated through various solo and coursework projects. I’m especially interested in Data Science and Machine Learning.</p>
         </div>
         <span>
             <a href='https://github.com/ShahadAlharbi21'>
