@@ -1,9 +1,10 @@
 import React from 'react';
-
 import styles from './StyleSheet.module.css';
 import githubDark from '../assets/github-dark.svg';
 import email from '../assets/mailboxdotorg.svg';
 import NavBar from './NavBar';
+import Footer from './Footer';
+
 function Contact(){
     return(<>
     <NavBar/>
@@ -29,6 +30,7 @@ function Contact(){
             </div>
         </span>
         </section>
+        <Footer/>
     </>
     );
 };
