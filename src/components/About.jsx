@@ -1,16 +1,12 @@
 import styles from './StyleSheet.module.css';
-import githubLight from '../assets/github-light.svg';
-import githubDark from '../assets/github-dark.svg';
 import Skills from './Skills';
 import NavBar from './NavBar';
 import Footer from './Footer';
 {/*import Resume from '../assets/Shahad_Dhwihi_S_Alharbi_Resume.pdf';*/}
-import {useTheme} from '../components/ThemeContext';
+
 
 
 function About() {
-    const {theme, toggleTheme} = useTheme();
-    const githubIcon = theme === 'light' ? githubLight : githubDark;
   return(
     <>
   <NavBar/>
@@ -25,11 +21,6 @@ function About() {
         <div className={styles.limitWidth}>
             <p>I’m currently in my final year of a Computer Science degree at the University of Manchester, supported by a competitive scholarship from NEOM. Throughout my studies, I’ve developed strong programming skills, demonstrated through various solo and coursework projects. I’m especially interested in Data Science and Machine Learning.</p>
         </div>
-        <span>
-            <a href='https://github.com/ShahadAlharbi21'>
-                <img src={githubIcon} alt='Github icon'/>
-            </a>
-        </span>
         {/*<a href={Resume} download>
             <button className="hover">Resume</button>
         </a>*/}
