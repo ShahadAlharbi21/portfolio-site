@@ -3,6 +3,7 @@ import githubLight from '../assets/github-light.svg';
 import githubDark from '../assets/github-dark.svg';
 import Skills from './Skills';
 import NavBar from './NavBar';
+import Footer from './Footer';
 {/*import Resume from '../assets/Shahad_Dhwihi_S_Alharbi_Resume.pdf';*/}
 import {useTheme} from '../components/ThemeContext';
 
@@ -34,8 +35,10 @@ function About() {
         </a>*/}
 
     </div>
+
   </section>
   <Skills/>
+  <Footer/>
   </>
   );
   
