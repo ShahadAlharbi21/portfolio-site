@@ -34,6 +34,7 @@ h1,h2,h3,p{
     color: var(--text-color);
     margin:0;
     padding:0;
+    text-align: center;
 }
 h2,h3,p{
     font-family: 'Roboto Mono', 'monospace';
@@ -49,5 +50,9 @@ h2,h3{
 }
 p{
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
+    overflow-wrap: break-word;
+}
+.h2{
+    text-align: center;
 }

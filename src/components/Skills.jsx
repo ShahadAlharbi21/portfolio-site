@@ -4,7 +4,7 @@ function Skills() {
   return (
     <section className={styles.skillsSection}>
       <div className={styles.skillsCard}>
-        <h2 id="skills-header2">Skills</h2>
+        <h2>Skills</h2>
 
         <div className={styles.skillGroup}>
           <h3>Languages</h3>
@@ -24,7 +24,7 @@ function Skills() {
 
         <div className={styles.skillGroup}>
           <h3>Libraries & Frameworks</h3>
-          <p id="paragraph">I’ve worked with the following frameworks and libraries:</p>
+          <p id="paragraph">In addition to small libraries, I’ve worked with the following frameworks and libraries in my projects:</p>
           <div className={styles.badges}>
             <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" className={styles.badgeImage} />
             <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" className={styles.badgeImage} />
