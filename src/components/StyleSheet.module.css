@@ -168,32 +168,86 @@
   padding-top: 20px;
 }
 
-.ProjectCard{
-  background-color: var(--card-bg, #030d1f);
-  padding: 2rem;
-  border-radius: 20px;
-  color: white;
-  max-width: 900px;
-  height: 400px;
-  margin: 0 auto;
-  padding-left: 5px;;
-}
 
-.ProjectCard h3{
-  font-size: 12px;
-  text-align: left;
-  color: white;
-}
-.projectsSection h1{
+.projectsSection h1 {
   padding-left: 165px;
   padding-bottom: 20px;
 }
 
-.stack{
-  background-color: var(--card-bg, #8c98aa);
-  padding: 2rem;
+.ProjectCard {
+  background-color: var(--card-bg, #030d1f);
   border-radius: 20px;
+  padding: 2rem;
   color: white;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.projectInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap:12px;
+}
+
+.leftContent {
+  width: 60%;
+  flex:1;
+}
+
+.leftContent h2 {
+  margin-bottom: 0.5rem;
+}
+
+.leftContent p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.rightTechCard {
+  background-color: #0b1d3a;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 35%;
+  font-size: 12px;
+  flex-shrink:0;
+  width:260px
+}
+
+.rightTechCard hr {
+  border: none;
+  border-top: 1px solid white;
+  margin: 0.8rem 0;
+}
+
+
+.projectInner h2{
+  color:white;
+}
+
+
+
+
+.rightTechCard section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-left: 10px;
+}
+
+.rightTechCard h3 {
+  font-size: 15px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.rightTechCard img {
+  margin-top: 18px;
+  height: 28px;
+  border-radius: 6px;
+  display: block;
 }
