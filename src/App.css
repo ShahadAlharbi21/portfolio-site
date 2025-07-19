@@ -98,8 +98,9 @@ p {
 }
 
 .NavBar {
-  padding: 20px 350px 100px;
+  padding: 40px 20px 100px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .limitedWidth {
@@ -116,9 +117,12 @@ p {
   background-color: var(--card-bg, #0a192f);
   border-radius: 12px;
   display: flex;
-  justify-content: flex-start;
-  padding: 20px 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
 }
 
 .NavBar a {
@@ -128,7 +132,7 @@ p {
   color: white;
   border-radius: 8px;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   text-align: center;
 }
 
@@ -152,6 +156,7 @@ p {
   border-radius: 20px;
   color: white;
   max-width: 900px;
+  width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -238,6 +243,7 @@ p {
   padding: 2rem;
   color: white;
   max-width: 1000px;
+  width: 90%;
   margin: 0 auto 24px;
   box-sizing: border-box;
 }
@@ -315,6 +321,7 @@ p {
   padding: 2rem;
   color: white;
   max-width: 900px;
+  width: 90%;
   margin: 0 auto 24px;
   box-sizing: border-box;
 }
@@ -352,8 +359,10 @@ p {
   }
 
   .ProjectCard,
-  .skillsCard {
+  .skillsCard,
+  .CourseCard {
     padding: 1rem;
+    width: 90%;
   }
 
   .projectInner {
