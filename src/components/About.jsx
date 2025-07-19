@@ -10,7 +10,7 @@ function About() {
   return(
     <>
   <NavBar/>
-  <section id="Shahad" className={styles.container}>
+  <section className={styles.container}>
     <div className={styles.info}>
         <h1>
             <b>Shahad Alharbi</b>
