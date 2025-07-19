@@ -269,7 +269,25 @@
   box-sizing: border-box;
 }
 
+.CourseCard3 {
+  background-color: var(--card-bg, #030d1f);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto 24px;
+  box-sizing: border-box;
+}
+
 .CourseCard h2 {
+  color: white;
+}
+.CourseCard2 h2 {
+  color: white;
+}
+
+.CourseCard3 h2 {
   color: white;
 }
 
@@ -320,13 +338,141 @@
   max-width: 40ch;
 }
 
-.CertificatesSection{
+
+
+
+
+.CourseCard2 li,
+.CourseCard2 h2,
+.CourseCard2 p{
+  font-family: 'Roboto Mono',' monospace';
+}
+
+.CourseCard2 p{
+  padding-bottom: 20px;
+}
+
+.CourseCard2 li{
+  padding-bottom: 30px;
+  max-width: 40ch;
+}
+
+
+.CourseCard3 li,
+.CourseCard3 h2,
+.CourseCard3 p{
+  font-family: 'Roboto Mono',' monospace';
+}
+
+.CourseCard3 p{
+  padding-bottom: 20px;
+}
+
+.CourseCard3 li{
+  padding-bottom: 30px;
+  max-width: 40ch;
+}
+
+
+.CertificatesSection {
   padding-top: 100px;
 }
+
 .CertificatesSection h1{
   padding-left: 180px;
   padding-bottom: 20px;
 }
 .CertificatesSection p{
   color:white;
+}
+
+.CourseCard{
+  min-height: 120vh;
+}
+
+.CourseCard a{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+  font-family: 'Roboto Mono',' monospace';
+  font-size: 15px;
+}
+
+.CourseCard a:hover{
+  background-color: #005fa3;
+  
+}
+
+.buttonDesign{
+  padding-left: 37px;
+}
+
+.CourseCard2 a{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+  font-family: 'Roboto Mono',' monospace';
+  font-size: 15px;
+}
+
+.CourseCard2 a:hover{
+  background-color: #005fa3;
+  
+}
+.CourseCard2{
+  min-height: 100vh;
+}
+
+.CourseCard2 {
+  background-color: var(--card-bg, #030d1f);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto 24px;
+  box-sizing: border-box;
+}
+
+
+.CourseCard3 a{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+  font-family: 'Roboto Mono',' monospace';
+  font-size: 15px;
+}
+
+.CourseCard3 a:hover{
+  background-color: #005fa3;
+  
+}
+.CourseCard3{
+  min-height: 61.5vh;
+}
+
+.CourseCard3 {
+  background-color: var(--card-bg, #030d1f);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto 24px;
+  box-sizing: border-box;
 }

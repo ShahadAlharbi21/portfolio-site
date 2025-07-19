@@ -20,6 +20,37 @@ return (
                 <li>Applied <strong>regularisation techniques</strong> such as <strong>Ridge</strong> and <strong>LASSO</strong> to prevent overfitting and improve generalisation.</li>
                 <li>Employed <strong>train/test splits</strong> and <strong>cross-validation</strong> to validate model performance.</li>
             </ul>
+            <div className={styles.buttonDesign}>
+                <a href = "/portfolio-site/Coursera_ML_Certificate.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+        </div>
+
+
+        <div className={styles.CourseCard2}>
+            <h2> Advanced Learning Algorithms</h2>
+            <p><em>Offered by DeepLearning.AI on Coursera</em></p>
+            <ul>
+                <li>Built and trained a neural network with TensorFlow to perform multi-class classification.</li>
+                <li>Applied best practices for machine learning development so that models generalise to data and tasks in the real world.</li>
+                <li>Built and used decision trees for classification and regression tasks.</li>
+                <li>Applied tree ensemble methods, including random forests and boosted trees.</li>
+            </ul>
+            <div className={styles.buttonDesign}>
+                <a href = "/portfolio-site/Coursera_Deep_Learning_Ceritificate.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+        </div>
+
+
+
+        <div className={styles.CourseCard3}>
+            <h2>Student Hackathon 2025</h2>
+            <p><em>Offered by The University of Manchester</em></p>
+            <ul>
+                <li>Collaborated in a team of 4 to build a simple tool that assists people with visual impairments in daily tasks using the Neuphonic library.</li>
+            </ul>
+            <div className={styles.buttonDesign}>
+                <a href = "/portfolio-site/Hackathon_Certificate.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
         </div>
     </section>
 
