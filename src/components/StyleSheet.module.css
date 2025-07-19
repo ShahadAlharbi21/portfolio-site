@@ -39,20 +39,16 @@
   white-space: normal;
 }
 
-
-
 .NavBar ul {
   list-style-type: none;
   background-color: var(--card-bg, #0a192f);
   border-radius: 12px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 40px;
-  justify-content: flex-start;
 }
-
 
 .NavBar a {
   padding: 8px 16px;
@@ -66,8 +62,6 @@
   word-spacing: normal;
 }
 
-
-
 .NavBar a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
@@ -77,17 +71,15 @@
   background-color: rgba(255, 255, 255, 0.4);
   color: white;
 }
-.NavBar li{
+
+.NavBar li {
   display: inline-block;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   list-style: none;
-  font-family: 'Roboto Mono', 'monospace';
+  font-family: 'Roboto Mono', monospace;
   font-size: 5px;
 }
-
-
-
 
 .skillsCard {
   background-color: var(--card-bg, #0a192f);
@@ -122,11 +114,10 @@
 }
 
 .badgeImage {
-  border-radius: 6px; 
+  border-radius: 6px;
   height: 28px;
   vertical-align: middle;
 }
-
 
 .ContactCardSection {
   background-color: var(--card-bg, #0a192f);
@@ -139,9 +130,10 @@
   justify-content: space-around;
   align-items: flex-start;
   height: auto;
+  flex-wrap: wrap;
 }
 
-.ContactCard h1{
+.ContactCard h1 {
   text-align: center;
   padding-bottom: 30px;
 }
@@ -161,13 +153,13 @@
   color: white;
   margin: 0;
 }
-.footer{
-  color:#888;
+
+.footer {
+  color: #888;
   text-align: center;
-  font-family: 'Roboto Mono', 'monospace';
+  font-family: 'Roboto Mono', monospace;
   padding-top: 20px;
 }
-
 
 .projectsSection h1 {
   padding-left: 165px;
@@ -181,20 +173,19 @@
   color: white;
   max-width: 1000px;
   margin: 0 auto;
-   margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .projectInner {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap:12px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .leftContent {
-  width: 60%;
-  flex:1;
-  flex-grow: 1;
+  flex: 1;
   width: 100%;
   max-width: 100%;
   padding: 0;
@@ -215,10 +206,9 @@
   background-color: #0b1d3a;
   padding: 1rem;
   border-radius: 15px;
-  width: 35%;
+  width: 260px;
   font-size: 12px;
-  flex-shrink:0;
-  width:260px;
+  flex-shrink: 0;
 }
 
 .rightTechCard hr {
@@ -227,13 +217,9 @@
   margin: 0.8rem 0;
 }
 
-
-.projectInner h2{
-  color:white;
+.projectInner h2 {
+  color: white;
 }
-
-
-
 
 .rightTechCard section {
   display: flex;
@@ -267,6 +253,47 @@
   margin-bottom: 24px;
 }
 
-.CourseCard h2{
-  color:white;
+.CourseCard h2 {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .NavBar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .NavBar ul {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .projectsSection h1 {
+    padding-left: 20px;
+  }
+
+  .ContactCardSection {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .rightTechCard {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .ProjectCard {
+    padding: 1rem;
+  }
+
+  .skillsCard {
+    padding: 1rem;
+  }
+
+  .projectInner {
+    flex-direction: column;
+  }
 }
