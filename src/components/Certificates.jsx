@@ -46,7 +46,7 @@ return (
             <h2>Student Hackathon 2025</h2>
             <p><em>Offered by The University of Manchester</em></p>
             <ul>
-                <li>Collaborated in a team of 4 to build a simple tool that assists people with visual impairments in daily tasks using the Neuphonic library.</li>
+                <li>Collaborated in a team of 4 to build a simple AI powered tool that assists people with visual impairments in daily tasks using the Neuphonics library.</li>
             </ul>
             <div className={styles.buttonDesign}>
                 <a href = "/portfolio-site/Hackathon_Certificate.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
