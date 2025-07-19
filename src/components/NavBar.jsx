@@ -6,14 +6,13 @@ import moon from '../assets/moon.svg';
 import { useTheme } from '../components/ThemeContext';
 
 function NavBar() {
-  const [activeIndex, setActiveIndex] = useState(0);
   const { theme, toggleTheme } = useTheme();
   const themeIcon = theme === 'light' ? sun : moon;
 
-  return (<>
+  return (
     <div className={styles.NavBar}>
       <ul>
-        <li><Link to="/about"><b>Home</b></Link></li>
+        <li><Link to="/"><b>Home</b></Link></li> {/* changed from /about to / */}
         <li><Link to="/projects"><b>Projects</b></Link></li>
         <li><Link to="/certificates"><b>Certificates</b></Link></li>
         <li><Link to="/contact"><b>Contact</b></Link></li>
@@ -27,7 +26,6 @@ function NavBar() {
         </li>
       </ul>
     </div>
-    </>
   );
 }
 

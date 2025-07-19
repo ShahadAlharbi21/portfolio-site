@@ -172,9 +172,11 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
+.projectsSection{
+  padding-top: 100px;
+}
 .projectsSection h1 {
-  padding-left: 132px;
+  padding-left: 134px;
   padding-bottom: 20px;
 }
 
@@ -301,4 +303,30 @@
 
 .ContactCardWrapper{
   padding-bottom: 100px;
+}
+
+.CourseCard li,
+.CourseCard h2,
+.CourseCard p{
+  font-family: 'Roboto Mono',' monospace';
+}
+
+.CourseCard p{
+  padding-bottom: 20px;
+}
+
+.CourseCard li{
+  padding-bottom: 30px;
+  max-width: 40ch;
+}
+
+.CertificatesSection{
+  padding-top: 100px;
+}
+.CertificatesSection h1{
+  padding-left: 180px;
+  padding-bottom: 20px;
+}
+.CertificatesSection p{
+  color:white;
 }
