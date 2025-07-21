@@ -34,6 +34,8 @@ function Skills() {
             <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" className={styles.badgeImage}/>
             <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white"className={styles.badgeImage} />
             <img src="https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=seaborn&logoColor=white" className={styles.badgeImage}/>
+            <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" className={styles.badgeImage} />
+            <img src="https://img.shields.io/badge/Cufflinks-268bd2?style=for-the-badge&logoColor=white" className={styles.badgeImage} />
           </div>
         </div>
 
