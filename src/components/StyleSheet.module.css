@@ -115,7 +115,6 @@
 }
 
 .badge {
-  background-color: #7f1717;
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 8px;
@@ -181,7 +180,7 @@
 }
 
 .ProjectCard {
-  background-color: var(--card-bg, #030d1f);
+  background-color: var(--card-bg, #0a192f);
   border-radius: 20px;
   padding: 2rem;
   color: white;
@@ -218,7 +217,7 @@
 }
 
 .rightTechCard {
-  background-color: #0b1d3a;
+  background-color:#0f2f5e;
   padding: 1rem;
   border-radius: 15px;
   width: 260px;
@@ -268,7 +267,7 @@
 }
 
 .CourseCard {
-  background-color: var(--card-bg, #030d1f);
+  background-color: var(--card-bg, #0a192f);
   border-radius: 20px;
   padding: 2rem;
   color: white;
