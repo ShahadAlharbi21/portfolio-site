@@ -14,7 +14,7 @@ npm run dev
 ```
 Then open http://localhost:5173 in your browser to view the app.
 
-### Build for Production
+### Create a production-ready version of the site
 ```bash
 npm run build
 ```
