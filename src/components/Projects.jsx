@@ -277,7 +277,9 @@ function Projects() {
                             <section>
                                 <h3>Tools</h3>
                                 <div className={styles.badgeRow}>
-                                    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+                                    <a href="https://www.diagrams.net" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://img.shields.io/badge/diagrams.net-FF7700?style=for-the-badge&logo=drawio&logoColor=white" />
+                                    </a>
                                 </div>
                             </section>
                         </div>
@@ -365,30 +367,33 @@ function Projects() {
                 </div>
 
                 <div className={styles.ProjectCard}>
-                    <div className={styles.projectInner}>
-                        <div className={styles.leftContent}>
-                            <h2>Pong Game</h2>
-                            <p>Coursework Project | Oct 2023 – Nov 2023</p>
-                            <p>
-                                Developed a multiplayer Pong game with Python using tkinter and Pillow. Included interactive GUI, real-time gameplay, state saving, cheat codes, and a boss key.
-                            </p>
-                        </div>
-                        <div className={styles.rightTechCard}>
-                            <section>
-                                <h3>Languages</h3>
-                                <div className={styles.badgeRow}>
-                                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" />
-                                </div>
+                        <div className={styles.projectInner}>
+                            <div className={styles.leftContent}>
+                                <h2>Pong Game</h2>
+                                <p>Coursework Project | Oct 2023 – Nov 2023</p>
+                                <p>
+                                    Developed a multiplayer Pong game with Python using tkinter and Pillow. Included interactive GUI, real-time gameplay, state saving, cheat codes, and a boss key.
+                                </p>
+                            </div>
+                            <div className={styles.rightTechCard}>
+                                <section>
+                                    <h3>Languages</h3>
+                                    <div className={styles.badgeRow}>
+                                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" />
+                                    </div>
+                                </section>
                                 <hr />
-                                <h3>Libraries</h3>
-                                <div className={styles.badgeRow}>
-                                    <img src="https://img.shields.io/badge/Tkinter-%233776AB?style=for-the-badge&logo=windowsterminal&logoColor=white" />
-                                    <img src="https://img.shields.io/badge/Pillow-306998?style=for-the-badge" />
-                                </div>
-                            </section>
+                                <section>
+                                    <h3>Libraries</h3>
+                                    <div className={styles.badgeRow}>
+                                        <img src="https://img.shields.io/badge/Tkinter-%233776AB?style=for-the-badge&logo=windowsterminal&logoColor=white" />
+                                        <img src="https://img.shields.io/badge/Pillow-306998?style=for-the-badge" />
+                                    </div>
+                                </section>
+                            </div>
                         </div>
                     </div>
-                </div>
+
             </section>
 
             <Footer />
