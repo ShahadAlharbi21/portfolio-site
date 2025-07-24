@@ -205,6 +205,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+.leftContent li{
+  color:white;
+  font-family: 'Roboto Mono',' monospace';
+  padding-bottom: 10px;
+}
 
 .leftContent h2 {
   margin-bottom: 0.5rem;
@@ -277,16 +282,6 @@
   box-sizing: border-box;
 }
 
-.CourseCard3 {
-  background-color: var(--card-bg, #030d1f);
-  border-radius: 20px;
-  padding: 2rem;
-  color: white;
-  max-width: 900px;
-  width: 90%;
-  margin: 0 auto 24px;
-  box-sizing: border-box;
-}
 
 .CourseCard h2 {
   color: white;
@@ -445,12 +440,9 @@
   background-color: #005fa3;
   
 }
-.CourseCard2{
-  min-height: 100vh;
-}
 
 .CourseCard2 {
-  background-color: var(--card-bg, #030d1f);
+  background-color: var(--card-bg, #0a192f);
   border-radius: 20px;
   padding: 2rem;
   color: white;
@@ -458,6 +450,7 @@
   width: 90%;
   margin: 0 auto 24px;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 
@@ -483,7 +476,7 @@
 }
 
 .CourseCard3 {
-  background-color: var(--card-bg, #030d1f);
+  background-color: var(--card-bg, #0a192f);
   border-radius: 20px;
   padding: 2rem;
   color: white;
