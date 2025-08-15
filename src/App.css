@@ -1,4 +1,5 @@
 :root {
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --background-color: #fff;
   --btn-color: #0987f2;
   --btn-text-coloe: #fff;
@@ -6,16 +7,19 @@
   --text-color: #222;
   --form-text-color: #555;
   --footer-text-color: #888;
+  --card-bg: #0a192f;
 }
 
 [data-theme='dark'] {
-  --background-color: #1E2A43;
+  --background-color: #07152a;
   --btn-color: #fff;
   --btn-text-coloe: #222;
-  --project-card-bg: #fff;
+  --project-card-bg: #0f2f5e;
   --text-color: #fff;
-  --form-text-color: #fff;
+  --form-text-color: #e6e9f5;
   --footer-text-color: #bbb;
+  --card-bg: #0a192f;
+  color-scheme: dark;
 }
 
 body {
@@ -25,6 +29,9 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   padding: 0;
+  color: var(--text-color);
+  transition: background-color .28s ease, color .28s ease, border-color .28s ease, box-shadow .28s ease;
+  font-family: var(--font-sans);
 }
 
 #root {
@@ -32,6 +39,7 @@ body {
   flex-direction: column;
   gap: 30px;
   box-sizing: border-box;
+  transition: background-color .28s ease, color .28s ease, border-color .28s ease;
 }
 
 h1, h2, h3, p {
@@ -39,14 +47,11 @@ h1, h2, h3, p {
   margin: 0;
   padding: 0;
   text-align: center;
-}
-
-h2, h3, p {
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-sans);
+  transition: color .28s ease, background-color .28s ease;
 }
 
 h1 {
-  font-family: 'Rubik', sans-serif;
   text-transform: uppercase;
   font-size: 32px;
   text-align: left;
@@ -61,7 +66,7 @@ h2, h3 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   padding: 10px;
   text-align: left;
@@ -69,11 +74,12 @@ p {
   word-break: break-word;
   max-width: 100%;
   box-sizing: border-box;
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
+.h2 { text-align: center; }
 
-
-.h2 {
-  text-align: center;
+a, button, input, textarea, select {
+  font-family: var(--font-sans);
+  transition: background-color .28s ease, color .28s ease, border-color .28s ease, box-shadow .28s ease, transform .15s ease;
 }

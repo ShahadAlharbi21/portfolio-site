@@ -4,9 +4,9 @@ function Skills() {
   return (
     <section className={styles.skillsSection}>
       <div className={styles.skillsCard}>
-        <h2>Skills</h2>
 
         <div className={styles.skillGroup}>
+          <h2>Skills</h2>
           <h3>Languages</h3>
           <p id="paragraph">I have used the following languages in my projects:</p>
           <div className={styles.badges}>

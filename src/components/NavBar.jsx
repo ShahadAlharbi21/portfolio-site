@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './StyleSheet.module.css';
 import sun from '../assets/sun.svg';
 import moon from '../assets/moon.svg';
@@ -12,10 +12,26 @@ function NavBar() {
   return (
     <div className={styles.NavBar}>
       <ul>
-        <li><Link to="/"><b>Home</b></Link></li> {/* changed from /about to / */}
-        <li><Link to="/projects"><b>Projects</b></Link></li>
-        <li><Link to="/certificates"><b>Certificates</b></Link></li>
-        <li><Link to="/contact"><b>Contact</b></Link></li>
+        <li>
+          <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            <b>Home</b>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            <b>Projects</b>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/certificates" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            <b>Certificates</b>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            <b>Contact</b>
+          </NavLink>
+        </li>
         <li id="icon">
           <img
             className={styles.colorMode}
