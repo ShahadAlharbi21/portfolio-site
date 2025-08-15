@@ -4,444 +4,166 @@
   --nav-active-bg-hover: color-mix(in srgb, var(--card-bg, #0a192f) 78%, #000 22%);
   --nav-focus-ring: color-mix(in srgb, var(--card-bg, #0a192f) 50%, #000 10%);
 }
+
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
-.skillsSection {
-  margin-top: 3rem;
-  text-align: center;
-}
+.skillsSection { margin-top: 3rem; text-align: center; }
 
 .skillsCard h3{
-  color: white;
-  text-align: left;
-  padding: 0;
-  padding-left: 0;
-  padding-bottom: 10px;
-  padding-left: 4px;
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
+  color: white; text-align: left; padding: 0; padding-left: 4px; padding-bottom: 10px;
+  margin-left: 0.2rem; margin-right: 0.2rem;
 }
 
-.skillsCard h2 {
-  text-align: center;
-  font-size: 30px;
-  color: white;
-  padding-bottom: 30px;
-}
+.skillsCard h2 { text-align: center; font-size: 30px; color: white; padding-bottom: 30px; }
 
-.NavBar {
-  padding: 40px 0 100px;
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+.NavBar { padding: 40px 0 100px; box-sizing: border-box; width: 100%; display: flex; justify-content: center; }
 
-.limitWidth p{
-  padding-left: 40px;
-}
+.limitWidth p{ padding-left: 40px; }
 
-.NavBar ul {
-  list-style: none;
-  background-color: var(--card-bg, #0a192f);
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 600px;
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
+.NavBar ul{
+  list-style: none; background-color: var(--card-bg, #0a192f); border-radius: 12px;
+  display: flex; justify-content: center; align-items: center; padding: 20px; flex-wrap: wrap; gap: 10px;
+  max-width: 600px; width: 90%; margin: 0 auto; text-align: center;
   transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
-.NavBar a {
-  padding: 8px 16px;
-  font-size: 16px;
-  font-weight: 300;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .25s ease, transform .1s ease;
+.NavBar a{
+  padding: 8px 16px; font-size: 16px; font-weight: 300; color: white; border-radius: 8px;
+  text-decoration: none; display: inline-block; text-align: center;
+  transition: background-color .2s ease, color .2s ease, transform .1s ease;
 }
 
-.NavBar a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-}
+.NavBar a:hover{ background-color: rgba(255,255,255,.2); color: white; }
 
 .NavBar a.active,
 .NavBar a[aria-current="page"]{
-  background-color: var(--nav-active-bg);
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-bg, #0a192f) 65%, #000 35%);
+  background-color: var(--nav-active-bg); color: #fff; font-weight: 600; border: none; box-shadow: none;
 }
 
 .NavBar a.active:hover,
-.NavBar a[aria-current="page"]:hover{
-  background-color: var(--nav-active-bg-hover);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-bg, #0a192f) 55%, #000 45%);
-}
+.NavBar a[aria-current="page"]:hover{ background-color: var(--nav-active-bg-hover); box-shadow: none; }
 
-.NavBar a:active{
-  transform: translateY(1px);
-  filter: brightness(.98);
-}
+.NavBar a:active{ transform: translateY(1px); filter: brightness(.98); }
 
-.NavBar a:focus-visible{
-  outline: none;
-  box-shadow: 0 0 0 3px var(--nav-focus-ring);
-}
+.NavBar a:focus-visible{ outline: none; box-shadow: 0 0 0 3px var(--nav-focus-ring); }
 
-.NavBar li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  font-size: 5px;
-}
+.NavBar li{ display: inline-block; padding: 0; margin: 0; font-size: 5px; }
 
-.skillsCard {
-  background-color: #0a192f;
-  border-radius: 20px;
-  color: white;
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 100px 100px;
-  padding-top: 40px;
+.skillsCard{
+  background-color: #0a192f; border-radius: 20px; color: white; width: 90%; max-width: 1000px;
+  margin: 0 auto; box-sizing: border-box; padding: 100px 100px; padding-top: 40px;
   transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
-.skillGroup {
-  margin-top: 1.2rem;
-  text-align: left;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.skillGroup{
+  margin-top: 1.2rem; text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto;
+  padding-left: 0.5rem; padding-right: 0.5rem;
 }
 
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 5px 0 0 0;
-  justify-content: flex-start;
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
+.badges{
+  display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; padding: 5px 0 0 0;
+  justify-content: flex-start; margin-left: 0.2rem; margin-right: 0.2rem;
 }
 
-.badge {
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  display: inline-block;
+.badge{ color: white; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.85rem; display: inline-block; }
+
+.badgeImage{ border-radius: 6px; height: 28px; vertical-align: middle; }
+
+.ContactCardSection{
+  background-color: var(--card-bg, #0a192f); padding: 2rem; border-radius: 20px; color: white; width: 100%;
+  max-width: 400px; margin: 0 auto; display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap;
+  box-sizing: border-box; transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
-.badgeImage {
-  border-radius: 6px;
-  height: 28px;
-  vertical-align: middle;
-}
+.ContactCard h1{ text-align: center; padding-bottom: 30px; }
+.ContactCardSection span{ display: flex; flex-direction: column; align-items: center; }
 
-.ContactCardSection {
-  background-color: var(--card-bg, #0a192f);
-  padding: 2rem;
-  border-radius: 20px;
-  color: white;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
-}
+.ImgH{ padding-top: 5px; text-align: center; }
+.ImgH h3{ color: white; margin: 0; }
 
-.ContactCard h1 {
-  text-align: center;
-  padding-bottom: 30px;
-}
+.footer{ color: #888; text-align: center; font-family: var(--font-sans); padding-top: 20px; padding-bottom: 20px; }
 
-.ContactCardSection span {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.projectsSection{ padding-top: 100px; }
 
-.ImgH {
-  padding-top: 5px;
-  text-align: center;
-}
-
-.ImgH h3 {
-  color: white;
-  margin: 0;
-}
-
-.footer {
-  color: #888;
-  text-align: center;
-  font-family: var(--font-sans);
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.projectsSection{
-  padding-top: 100px;
-}
 .projectsSection h1{
-  margin: 0 0 20px;
-  text-align: left;
-  padding-left: clamp(100px, 4vw, 40px);
-  font-size: clamp(24px, 3.5vw, 40px);
-  line-height: 1.2;
+  margin: 0 0 20px; text-align: left;
+  padding-left: clamp(40px, 4vw, 100px);
+  font-size: clamp(24px, 3.5vw, 40px); line-height: 1.2;
 }
 
-.ProjectCard {
-  background-color: var(--card-bg, #0a192f);
-  border-radius: 20px;
-  padding: 2rem;
-  color: white;
-  max-width: 1000px;
-  width: 90%;
-  margin: 0 auto 24px;
-  box-sizing: border-box;
+.ProjectCard{
+  background-color: var(--card-bg, #0a192f); border-radius: 20px; padding: 1.75rem; color: white;
+  max-width: 960px; width: 90%; margin: 0 auto 24px; box-sizing: border-box;
   transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
-.projectInner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+.projectInner{ display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
 
-.leftContent {
-  flex: 1;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.leftContent li{
-  color:white;
-  padding-bottom: 10px;
-  font-family: var(--font-sans);
-}
+.leftContent{ flex: 1; width: 100%; padding: 0; margin: 0; box-sizing: border-box; }
+.leftContent li{ color: white; padding-bottom: 10px; font-family: var(--font-sans); }
+.leftContent h2{ margin-bottom: 0.5rem; }
+.leftContent p{ font-size: 17px; line-height: 1.75; color: #ccc; }
 
-.leftContent h2 {
-  margin-bottom: 0.5rem;
-}
-
-.leftContent p {
-  font-size: 17px;
-  line-height: 1.75;
-  color: #ccc;
-}
-
-.rightTechCard {
-  background-color:#0f2f5e;
-  padding: 1rem;
-  border-radius: 15px;
-  width: 260px;
-  font-size: 12px;
-  flex-shrink: 0;
+.rightTechCard{
+  background-color:#0f2f5e; padding: 1rem; border-radius: 15px; width: 250px; font-size: 12px; flex-shrink: 0;
   transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
-.rightTechCard hr {
-  border: none;
-  border-top: 1px solid white;
-  margin: 0.8rem 0;
-}
+.rightTechCard hr{ border: none; border-top: 1px solid white; margin: 0.8rem 0; }
+.projectInner h2{ color: white; }
 
-.projectInner h2 {
-  color: white;
-}
-
-.rightTechCard section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-  padding-left: 10px;
-}
-
-.rightTechCard section img {
-  margin-top: 8px;
-  height: 28px;
-  border-radius: 6px;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.rightTechCard h3 {
-  font-size: 15px;
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-
-.rightTechCard img {
-  margin-top: 18px;
-  height: 28px;
-  border-radius: 6px;
-  display: block;
-}
+.rightTechCard section{ display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 1.5rem; padding-left: 10px; }
+.rightTechCard section img{ margin-top: 8px; height: 28px; border-radius: 6px; display: inline-block; margin-right: 8px; }
+.rightTechCard h3{ font-size: 15px; color: white; margin: 0; padding: 0; }
+.rightTechCard img{ margin-top: 18px; height: 28px; border-radius: 6px; display: block; }
 
 .CourseCard,
 .CourseCard2,
-.CourseCard3 {
-  background-color: var(--card-bg, #0a192f);
-  border-radius: 20px;
-  padding: 1.25rem;
-  color: white;
-  max-width: 720px;
-  width: 86%;
-  margin: 0 auto 24px;
-  box-sizing: border-box;
+.CourseCard3{
+  background-color: var(--card-bg, #0a192f); border-radius: 20px; padding: 1.75rem; color: white;
+  max-width: 880px; width: 90%; margin: 0 auto 24px; box-sizing: border-box;
   transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
-.CourseCard h2 { color: white; }
-.CourseCard2 h2 { color: white; }
-.CourseCard3 h2 { color: white; }
+.CourseCard h2, .CourseCard2 h2, .CourseCard3 h2{ color: white; }
 
-.badgeRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+.badgeRow{ display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+.skillsCard .badges{ margin-left: 0.2rem; margin-right: 0.2rem; }
+
+.info h1, .info h2{ padding-left: 40px; }
+.divider{ margin-bottom: 20px; margin-top: 30px; margin-left: 10px; }
+
+.skillGroup h3, .skillGroup p{ color:white; padding-left: 0; margin-left: 0; font-family: var(--font-sans); }
+.skillGroup p{ font-size: 15px; }
+
+.ContactCardWrapper{ padding-bottom: 100px; }
+
+.CourseCard li, .CourseCard h2, .CourseCard p,
+.CourseCard2 li, .CourseCard2 h2, .CourseCard2 p,
+.CourseCard3 li, .CourseCard3 h2, .CourseCard3 p{ font-family: var(--font-sans); }
+
+.CourseCard p, .CourseCard2 p, .CourseCard3 p{ padding-bottom: 20px; }
+.CourseCard li, .CourseCard2 li, .CourseCard3 li{ padding-bottom: 30px; max-width: 40ch; }
+
+.CertificatesSection{ padding-top: 100px; }
+.CertificatesSection h1{ padding-left: 100px; padding-bottom: 20px; }
+.CertificatesSection p{ color:white; }
+
+.CourseCard{ min-height: auto; } .CourseCard2{ min-height: auto; } .CourseCard3{ min-height: auto; }
+
+.CourseCard a, .CourseCard2 a, .CourseCard3 a{
+  display: inline-block; padding: 10px 20px; background-color: #0077cc; color: white; text-decoration: none;
+  border-radius: 8px; font-weight: bold; transition: background-color 0.2s ease-in-out, color .2s ease; font-size: 15px; font-family: var(--font-sans);
 }
+.CourseCard a:hover, .CourseCard2 a:hover, .CourseCard3 a:hover{ background-color: #005fa3; }
 
-.skillsCard .badges {
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
-}
+.buttonDesign{ padding-left: 37px; }
 
-.info h1, 
-.info h2{
-  padding-left: 40px;
-}
+img, video{ max-width: 100%; height: auto; display: block; }
 
-.divider {
-  margin-bottom: 20px;
-  margin-top: 30px;
-  margin-left: 10px;
-}
-
-.skillGroup h3,
-.skillGroup p{
-  color:white;
-  padding-left: 0px;
-  margin-left: 0px;
-  font-family: var(--font-sans);
-}
-
-.skillGroup p{
-  font-size: 15px;
-}
-
-.ContactCardWrapper{
-  padding-bottom: 100px;
-}
-
-.CourseCard li,
-.CourseCard h2,
-.CourseCard p{
-  font-family: var(--font-sans);
-}
-
-.CourseCard p{
-  padding-bottom: 20px;
-}
-
-.CourseCard li{
-  padding-bottom: 30px;
-  max-width: 40ch;
-}
-
-.CourseCard2 li,
-.CourseCard2 h2,
-.CourseCard2 p{
-  font-family: var(--font-sans);
-}
-
-.CourseCard2 p{
-  padding-bottom: 20px;
-}
-
-.CourseCard2 li{
-  padding-bottom: 30px;
-  max-width: 40ch;
-}
-
-.CourseCard3 li,
-.CourseCard3 h2,
-.CourseCard3 p{
-  font-family: var(--font-sans);
-}
-
-.CourseCard3 p{
-  padding-bottom: 20px;
-}
-
-.CourseCard3 li{
-  padding-bottom: 30px;
-  max-width: 40ch;
-}
-
-.CertificatesSection {
-  padding-top: 100px;
-}
-
-.CertificatesSection h1{
-  padding-left: 240px;
-  padding-bottom: 20px;
-}
-.CertificatesSection p{
-  color:white;
-}
-
-.CourseCard{ min-height: auto; }
-.CourseCard2{ min-height: auto; }
-.CourseCard3{ min-height: auto; }
-
-.CourseCard a,
-.CourseCard2 a,
-.CourseCard3 a{
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0077cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.2s ease-in-out, color .2s ease;
-  font-size: 15px;
-  font-family: var(--font-sans);
-}
-
-.CourseCard a:hover,
-.CourseCard2 a:hover,
-.CourseCard3 a:hover{
-  background-color: #005fa3;
-}
-
-.buttonDesign{
-  padding-left: 37px;
+@media (max-width: 600px){
+  .skillsCard h3, .skillGroup p{ text-align: left; padding-left: 0; margin-left: 0; }
+  .projectsSection h1{ padding-left: clamp(16px, 4vw, 40px); }
+  .ProjectCard{ padding: 1.5rem; }
+  .CourseCard, .CourseCard2, .CourseCard3{ padding: 1.5rem; }
 }
