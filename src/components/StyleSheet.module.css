@@ -171,19 +171,20 @@ img, video{ max-width: 100%; height: auto; display: block; }
   .leftContent{ order: 1; }
   .rightTechCard{
     order: 2;
-    width: 100%;
-    max-width: 100%;
-    align-self: stretch;
-    padding: 0.6rem 0.7rem;
-    border-radius: 12px;
-    font-size: 11px;
+    width: 90%;
+    max-width: 90%;
+    align-self: center;
+    margin: 4px auto 2px;
+    padding: 0.5rem 0.6rem;
+    border-radius: 10px;
+    font-size: 10.5px;
   }
-  .rightTechCard h3{ font-size: 13px; }
-  .rightTechCard section{ margin-bottom: 0.6rem; padding-left: 6px; }
-  .rightTechCard hr{ margin: 0.5rem 0; }
+  .rightTechCard h3{ font-size: 12.5px; margin: 0 0 6px; }
+  .rightTechCard section{ margin-bottom: 0.45rem; padding-left: 4px; }
+  .rightTechCard hr{ margin: 0.4rem 0; }
   .rightTechCard img,
-  .rightTechCard section img{ height: 20px; }
-  .rightTechCard .badge{ font-size: 0.72rem; padding: 0.25rem 0.5rem; }
+  .rightTechCard section img{ height: 18px; }
+  .rightTechCard .badge{ font-size: 0.68rem; padding: 0.2rem 0.45rem; }
 
   .ProjectCard{ padding: 1.25rem 1.4rem; max-width: 94%; width: 94%; overflow: hidden; }
   .CourseCard, .CourseCard2, .CourseCard3{ padding: 1.25rem 1.4rem; max-width: 94%; width: 94%; }
