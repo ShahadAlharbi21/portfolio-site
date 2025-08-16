@@ -168,9 +168,11 @@ img, video{ max-width: 100%; height: auto; display: block; }
 
   .projectInner{ flex-direction: column; gap: 12px; }
   .leftContent{ order: 1; }
-  .rightTechCard{ order: 2; width: 100%; max-width: none; align-self: stretch; }
+  .rightTechCard{ order: 2; width: 100%; max-width: 100%; align-self: stretch; padding: 0.85rem; }
 
-  .ProjectCard{ padding: 1.25rem 1.4rem; max-width: 94%; width: 94%; }
+  .ProjectCard{ padding: 1.25rem 1.4rem; max-width: 94%; width: 94%; overflow: hidden; }
   .CourseCard, .CourseCard2, .CourseCard3{ padding: 1.25rem 1.4rem; max-width: 94%; width: 94%; }
   .leftContent p{ font-size: 14px; line-height: 1.55; }
+
+  .CertificatesSection h1{ text-align: left; }
 }
