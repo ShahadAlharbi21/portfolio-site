@@ -171,8 +171,8 @@ img, video{ max-width: 100%; height: auto; display: block; }
   .leftContent{ order: 1; }
   .rightTechCard{
     order: 2;
-    width: 90%;
-    max-width: 90%;
+    width: 70% !important;
+    max-width: 360px !important;
     align-self: center;
     margin: 4px auto 2px;
     padding: 0.5rem 0.6rem;
@@ -190,5 +190,10 @@ img, video{ max-width: 100%; height: auto; display: block; }
   .CourseCard, .CourseCard2, .CourseCard3{ padding: 1.25rem 1.4rem; max-width: 94%; width: 94%; }
   .leftContent p{ font-size: 14px; line-height: 1.55; }
 
-  .CertificatesSection h1{ text-align: left; }
+  .CertificatesSection h1{ text-align: left; padding: 0 !important; margin: 0 0 12px 0; }
+}
+
+@media (min-width: 601px) and (max-width: 1024px){
+  .CertificatesSection h1{ text-align: left; padding: 0 !important; margin: 0 0 12px 0; }
+  .rightTechCard{ width: 200px; }
 }
