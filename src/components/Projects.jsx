@@ -173,6 +173,18 @@ function Projects() {
                                 </a>
                                 </div>
                             </section>
+                            <hr/>
+                            <section>
+                                <h3>Libraries</h3>
+                                <div className={styles.badgeRow}>
+                                    <a href="https://docs.python.org/3/library/threading.html" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://img.shields.io/badge/threading-6A1B9A?style=for-the-badge" alt="threading" className={styles.badgeImage} />
+                                    </a>
+                                    <a href="https://docs.python.org/3/library/socket.html" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://img.shields.io/badge/socket-00695C?style=for-the-badge" alt="socket" className={styles.badgeImage} />
+                                    </a>
+                                </div>
+                            </section>
                             </div>
                         </div>
                     </div>
@@ -189,29 +201,36 @@ function Projects() {
                         <div className={styles.leftContent}>
                             <h2>BM25 for Retrieval-Augmented Question Answering</h2>
                             <p>Coursework Project | Dec 2024 – Dec 2024</p>
-                            <p>
-                                Developed a BM25-based text retrieval engine in Python for document ranking and question-answering. Implemented a full pipeline beginning with preprocessing, which normalised input by converting to lowercase, removing punctuation, stripping whitespace, filtering out stopwords, and optionally applying stemming using PyStemmer.
-                            </p>
-                            <p>
-                                For scoring, implemented IDF computation by counting how many documents contained each query term and applying the BM25 IDF formula. Designed and implemented the BM25 scoring function, which evaluated the relevance of each document to a given question using term frequency and document length normalisation.
-                            </p>
-                            <p>
-                                Scored each document in the corpus against the input query using the BM25 formula and returned the top-n highest scoring documents.
-                            </p>
+                            <ul>
+                                <li>Built an end-to-end BM25 retrieval pipeline: preprocessing → corpus stats → scoring → ranked results.</li>
+                                <li>Implemented a deterministic preprocessing stack: trim, lowercase, convert punctuation to spaces (preserving token boundaries), remove stopwords, optional stemming.</li>
+                                <li>Handled tricky punctuation safely (e.g., “motor-driven” → “motor driven”, “world’s” → “world s”) and collapsed redundant whitespace.</li>
+                                <li>Calculated inverse document frequency with BM25 0.5 smoothing (log₁₀) and safe handling for unseen terms.</li>
+                                <li>Scored documents with BM25 (k₁=2, b=0.75) using per-document term frequencies and length normalisation.</li>
+                                <li>Ranked all documents by score and returned the top-N original texts with deterministic tie-breaking.</li>
+                            </ul>
+
                         </div>
 
                         <div className={styles.rightTechCard}>
                             <section>
                                 <h3>Languages</h3>
                                 <div className={styles.badgeRow}>
-                                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" />
+                                    <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" className={styles.badgeImage} />
+                                    </a>
                                 </div>
                             </section>
                             <hr />
                             <section>
                                 <h3>Libraries</h3>
                                 <div className={styles.badgeRow}>
-                                    <img src="https://img.shields.io/badge/PyStemmer-44cc11?style=for-the-badge"/>
+                                    <a href="https://pypi.org/project/PyStemmer/" target="_blank" rel="noopener noreferrer" style={{display:'inline-block', marginRight:'8px', verticalAlign:'middle'}}>
+                                        <img src="https://img.shields.io/badge/PyStemmer-2EA44F?style=for-the-badge&logo=leaflet&logoColor=white" alt="PyStemmer" className={styles.badgeImage} />
+                                    </a>
+                                    <a href="https://docs.python.org/3/library/re.html" target="_blank" rel="noopener noreferrer" style={{display:'inline-block', verticalAlign:'middle'}}>
+                                        <img src="https://img.shields.io/badge/re%20(regex)-8A2BE2?style=for-the-badge&logo=regex&logoColor=white" alt="re (regex)" className={styles.badgeImage} />
+                                    </a>
                                 </div>
                             </section>
                         </div>

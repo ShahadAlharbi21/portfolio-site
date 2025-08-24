@@ -73,6 +73,10 @@ function Skills() {
             <a href="https://www.tensorflow.org/api_docs" target="_blank" rel="noopener noreferrer">
               <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" className={styles.badgeImage} />
             </a>
+            <a href="https://pytorch.org/docs/stable/" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" className={styles.badgeImage} />
+            </a>
+
           </div>
         </div>
 
@@ -90,6 +94,9 @@ function Skills() {
             </a>
             <a href="https://www.sqlite.org/docs.html" target="_blank" rel="noopener noreferrer">
               <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" className={styles.badgeImage} />
+            </a>
+            <a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" className={styles.badgeImage} />
             </a>
           </div>
         </div>
