@@ -77,6 +77,10 @@ function Skills() {
               <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" className={styles.badgeImage} />
             </a>
 
+            <a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/badge/Flask-8A2BE2?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" className={styles.badgeImage}/>
+          </a>
+
           </div>
         </div>
 
@@ -119,6 +123,10 @@ function Skills() {
             <a href="https://www.latex-project.org/help/documentation/" target="_blank" rel="noopener noreferrer">
               <img src="https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX" className={styles.badgeImage} />
             </a>
+            <a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"alt="Docker"className={styles.badgeImage}/>
+            </a>
+
           </div>
         </div>
       </div>

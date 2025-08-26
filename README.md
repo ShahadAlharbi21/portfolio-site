@@ -12,7 +12,7 @@ npm install
 ```bash
 npm run dev
 ```
-Then open http://localhost:5173 in your browser to view the app.
+Then open http://localhost:5173/portfolio-site in your browser to view the app.
 
 ### Create a production-ready version of the site
 ```bash

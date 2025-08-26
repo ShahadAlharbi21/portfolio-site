@@ -245,22 +245,29 @@ function Projects() {
                         <div className={styles.leftContent}>
                             <h2>Features for Estimating Autonomous Vehicle Poses</h2>
                             <p>Coursework Project | Nov 2024 – Nov 2024</p>
-                            <p>
-                                Implemented feature matching techniques for a visual odometry pipeline using Python and OpenCV. Developed three custom matching strategies: a basic distance-based filter, nearest neighbour matching, and nearest neighbour distance ratio (NNDR). Extracted SIFT descriptors from sequences of driving scene images, computed pairwise descriptor distances, and identified valid keypoint correspondences using spatial thresholds and ratio-based checks. Verified implementation by visually inspecting overlaid feature matches across image pairs to ensure consistent and accurate correspondence.
-                            </p>
+                            <ul> 
+                                <li>Built a visual-odometry feature-matching component: detect SIFT keypoints → match between consecutive frames → resolve pixel coordinates → inspect results.</li> 
+                                <li>Implemented three OpenCV/BFMatcher strategies (distance thresholding, nearest neighbour, NNDR) and returned serialisable, deterministic match lists.</li> 
+                                <li>Normalised feature IDs by sorting keypoints, ensuring consistent behaviour across OpenCV versions.</li> 
+                                <li>Computed coordinates for the selected feature and its matches, compatible with the provided CLI visualisations/outputs.</li> <li>Handled edge cases cleanly (no matches, out-of-range feature IDs) and validated on the MyKITTI subset.</li> 
+                            </ul>
                         </div>
                         <div className={styles.rightTechCard}>
                             <section>
                                 <h3>Languages</h3>
-                                <div className={styles.badgeRow}>
-                                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" />
-                                </div>
+                                    <div className={styles.badgeRow}>
+                                        <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                                            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" className={styles.badgeImage} />
+                                        </a>
+                                    </div>
                             </section>
                             <hr />
                             <section>
                                 <h3>Libraries</h3>
                                 <div className={styles.badgeRow}>
-                                    <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
+                                    <a href="https://docs.opencv.org/master/" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" className={styles.badgeImage} />
+                                    </a>
                                 </div>
                             </section>
                         </div>
