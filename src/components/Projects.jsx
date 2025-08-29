@@ -471,6 +471,56 @@ function Projects() {
         </div>
 
         <div className={styles.ProjectCard}>
+            <div className={styles.projectInner}>
+                <div className={styles.leftContent}>
+                <h2>Spam Filter with Naïve Bayes</h2>
+                <p>Coursework Project | Apr 2024 – Apr 2024</p>
+                <ul>
+                    <li>Developed a Naïve Bayes spam filter from scratch in Python, without scikit-learn.</li>
+                    <li>Preprocessed messages using regex cleaning, tokenisation, and normalisation.</li>
+                    <li>Built frequency dictionaries for spam and ham messages to estimate probabilities.</li>
+                    <li>Split dataset into training, validation, and test sets to measure generalisation.</li>
+                    <li>Visualised word distributions and frequencies using Matplotlib and WordCloud.</li>
+                    <li>Achieved an accuracy of 87% on the test set, with detailed misclassification analysis.</li>
+                </ul>
+                </div>
+                <div className={styles.rightTechCard}>
+                <section>
+                    <h3>Languages</h3>
+                    <div className={styles.badgeRow}>
+                    <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
+                    </a>
+                    </div>
+                </section>
+                <hr />
+                <section>
+                    <h3>Libraries</h3>
+                    <div className={styles.badgeRow}>
+                    <a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+                    </a>
+                    <a href="https://numpy.org/doc/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+                    </a>
+                    <a href="https://matplotlib.org/stable/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib" />
+                    </a>
+                    <a href="https://amueller.github.io/word_cloud/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/WordCloud-46A2F1?style=for-the-badge&logo=cloud&logoColor=white" alt="WordCloud" />
+                    </a>
+                    <a href="https://docs.python.org/3/library/re.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/re%20(regex)-8A2BE2?style=for-the-badge" alt="re (regex)" />
+                    </a>
+                    </div>
+                </section>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Magic Bakery</h2>
