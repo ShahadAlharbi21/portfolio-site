@@ -10,6 +10,28 @@ return (
     
     <section className={styles.CertificatesSection}>
         <h1>Certificates</h1>
+            <div className={styles.CourseCard}>
+                <h2>Python for Data Science and Machine Learning Bootcamp</h2>
+                <p><em>Offered by Udemy — <strong>In Progress</strong></em></p>
+                <ul>
+                    <li>Gaining hands-on experience in <strong>Python programming</strong> for data science workflows.</li>
+                    <li>Applying <strong>NumPy</strong> and <strong>Pandas</strong> for numerical computing, data manipulation, and analysis.</li>
+                    <li>Creating rich data visualisations using <strong>Matplotlib</strong>, <strong>Seaborn</strong>, and <strong>Plotly</strong>.</li>
+                    <li>Implementing core <strong>machine learning algorithms</strong> with <strong>Scikit-Learn</strong>, including <strong>linear regression</strong>, <strong>logistic regression</strong>, <strong>KNN</strong>, <strong>K-Means clustering</strong>, <strong>decision trees</strong>, and <strong>random forests</strong>.
+                    </li>
+                    <li>Exploring advanced topics such as <strong>natural language processing (NLP)</strong>, 
+                        <strong>neural networks</strong>, and <strong>support vector machines</strong>.
+                    </li>
+                    <li>Connecting Python to external data sources (Excel, SQL) and performing <strong>web scraping</strong>.</li>
+                    <li>Working with <strong>Spark</strong> for large-scale data analysis.</li>
+                </ul>
+                {/*
+                <div className={styles.buttonDesign}>
+                    <a href="/portfolio-site/Udemy_DS_ML_Certificate.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                </div>
+                */}
+            </div>
+
         <div className={styles.CourseCard}>
             <h2>Supervised Machine Learning: Regression and Classification</h2>
             <p><em>Offered by DeepLearning.AI on Coursera</em></p>
