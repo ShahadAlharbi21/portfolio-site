@@ -13,7 +13,7 @@ function NavBar() {
     <div className={styles.NavBar}>
       <ul>
         <li>
-          <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
+          <NavLink to="/about" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
             <b>Home</b>
           </NavLink>
         </li>
