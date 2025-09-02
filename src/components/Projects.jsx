@@ -102,7 +102,7 @@ function Projects() {
             </div>
           </div>
         </div>
-
+    {/*
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
@@ -141,6 +141,8 @@ function Projects() {
             </div>
           </div>
         </div>
+
+        */}
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
@@ -221,7 +223,7 @@ function Projects() {
             </div>
           </div>
         </div>
-
+{/*
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
@@ -260,7 +262,7 @@ function Projects() {
             </div>
           </div>
         </div>
-
+*/}
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
@@ -519,7 +521,7 @@ function Projects() {
         </div>
 
 
-
+{/*
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
@@ -546,7 +548,8 @@ function Projects() {
             </div>
           </div>
         </div>
-
+*/}
+{/*
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
@@ -573,7 +576,8 @@ function Projects() {
             </div>
           </div>
         </div>
-
+*/}
+{/*
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
@@ -666,7 +670,7 @@ function Projects() {
             </div>
           </div>
         </div>
-
+    */}
       </section>
 
       <Footer />
