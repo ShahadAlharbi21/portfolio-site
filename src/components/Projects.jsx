@@ -1,4 +1,4 @@
-import styles from './StyleSheet.module.css';
+﻿import styles from './StyleSheet.module.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
@@ -8,9 +8,370 @@ function Projects() {
       <NavBar />
 
       <section className={styles.projectsSection}>
-        <h1>Projects</h1>
+        <p className={styles.eyebrow}>Engineering / Selected work</p><h1>Projects</h1><p className={styles.sectionIntro}>Explorations in machine learning, computer vision, and software systems. From underlying algorithms to working implementations.</p>
 
-        <div className={styles.ProjectCard}>
+<div className={styles.projectJump}><label htmlFor="project-jump">Jump to a project</label><select id="project-jump" defaultValue="" onChange={(event) => { const target = document.getElementById(event.target.value); if (target) { target.scrollIntoView({ block: 'start' }); target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true }); } }}><option value="">Choose a project</option><option value="project-1">Stereo Vision and 3D Scene Reconstruction</option><option value="project-2">Harris Corner Detection and Feature Matching</option><option value="project-3">CNN Image Classification on CIFAR-100</option><option value="project-4">Image Filtering and Edge Detection</option><option value="project-5">Hex AI Agent</option><option value="project-6">Movie Genre Classification with Neural Models</option><option value="project-7">Distributional Semantics for Word Similarity</option><option value="project-8">X-Ray Prohibited Item Detection Platform</option><option value="project-10">Loan Classification and Soybean Yield Prediction</option><option value="project-11">Histogram & Horizon Detection with OpenCV</option><option value="project-13">BM25 for Retrieval-Augmented Question Answering</option><option value="project-14">Features for Estimating Autonomous Vehicle Poses</option><option value="project-15">Constraint Satisfaction</option><option value="project-16">Othello AI Using Minimax with Alpha-Beta Pruning</option><option value="project-17">Kilburnazon Employee Management System</option><option value="project-18">Kilburnazon Database Design</option><option value="project-19">Spam Filter with Naïve Bayes</option></select></div>
+        {/* CW3 */}
+        <div id="project-1" className={styles.ProjectCard}>
+          <div className={styles.projectInner}>
+            <div className={styles.leftContent}>
+              <h2>Stereo Vision and 3D Scene Reconstruction</h2>
+              <p>Coursework Project | May 2026</p>
+              <ul>
+                <li>Implemented stereo disparity mapping for depth estimation using grayscale and Canny edge-based image inputs.</li>
+                <li>Calculated camera focal length as <strong>41.74mm</strong> from pixel focal length, sensor width, and image resolution.</li>
+                <li>Tuned stereo block-matching parameters across disparity ranges, block sizes, and Canny thresholds using OpenCV trackbars.</li>
+                <li>Generated 3D point clouds from disparity values, filtering points beyond <strong>5000mm</strong> and sampling every <strong>5</strong> pixels.</li>
+                <li>Compared dense No-Canny reconstruction against sparse Canny-based reconstruction across 3D, top, and side views.</li>
+                <li>Built a disparity-based selective focus pipeline with depth masking, morphology, and background blur.</li>
+              </ul>
+            </div>
+
+            <div className={styles.rightTechCard}>
+              <section>
+                <h3>Languages</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
+                  </a>
+                </div>
+              </section>
+              <hr />
+              <section>
+                <h3>Libraries</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://docs.opencv.org/master/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
+                  </a>
+                  <a href="https://numpy.org/doc/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+                  </a>
+                  <a href="https://matplotlib.org/stable/index.html" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib" />
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        {/* CW2 */}
+        <div id="project-2" className={styles.ProjectCard}>
+          <div className={styles.projectInner}>
+            <div className={styles.leftContent}>
+              <h2>Harris Corner Detection and Feature Matching</h2>
+              <p>Coursework Project | Apr 2026</p>
+              <ul>
+                <li>Implemented a Harris corner detector from scratch using Sobel gradients, Gaussian weighting, and Harris response scoring.</li>
+                <li>Applied <strong>5×5</strong> Gaussian weighting, <strong>7×7</strong> non-maximum suppression, and relative thresholding to select keypoints.</li>
+                <li>Selected a threshold factor of <strong>0.078</strong>, producing <strong>102</strong> Harris keypoints for descriptor matching.</li>
+                <li>Computed ORB descriptors for custom Harris keypoints and benchmarked against OpenCV ORB-Harris and ORB-FAST.</li>
+                <li>Implemented SSD and ratio-test feature matchers from scratch with interactive threshold tuning.</li>
+                <li>Evaluated matching robustness across rotation, blur, noise, pixelation, brightness, darkness, scale change, and cluttered scenes.</li>
+              </ul>
+            </div>
+
+            <div className={styles.rightTechCard}>
+              <section>
+                <h3>Languages</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
+                  </a>
+                </div>
+              </section>
+              <hr />
+              <section>
+                <h3>Libraries</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://docs.opencv.org/master/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
+                  </a>
+                  <a href="https://numpy.org/doc/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+                  </a>
+                  <a href="https://scipy.org/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy" />
+                  </a>
+                  <a href="https://matplotlib.org/stable/index.html" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib" />
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+          <div id="project-3" className={styles.ProjectCard}>
+            <div className={styles.projectInner}>
+              <div className={styles.leftContent}>
+                <h2>CNN Image Classification on CIFAR-100</h2>
+                <p>Coursework Project | Apr 2026</p>
+                <ul>
+                  <li>Designed and implemented a convolutional neural network to classify images across <strong>100</strong> object categories.</li>
+                  <li>Built a three-block CNN architecture incorporating convolutional layers, batch normalisation, max pooling, dropout, and fully connected classification layers.</li>
+                  <li>Conducted a full grid search across <strong>81</strong> hyperparameter configurations, repeated <strong>3</strong> times each, totalling <strong>243</strong> training runs.</li>
+                  <li>Evaluated the impact of optimiser, learning rate, batch size, and training epochs on classification performance.</li>
+                  <li>Achieved a peak validation accuracy of <strong>58.05%</strong> using the best-performing hyperparameter configuration.</li>
+                </ul>
+              </div>
+
+              <div className={styles.rightTechCard}>
+                <section>
+                  <h3>Languages</h3>
+                  <div className={styles.badgeRow}>
+                    <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
+                    </a>
+                  </div>
+                </section>
+
+                <hr />
+
+                <section>
+                  <h3>Libraries & Frameworks</h3>
+                  <div className={styles.badgeRow}>
+                    <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+                    </a>
+
+                    <a href="https://keras.io/" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white" alt="Keras" />
+                    </a>
+
+                    <a href="https://numpy.org/doc/" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+                    </a>
+
+                    <a href="https://matplotlib.org/stable/" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib" />
+                    </a>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+
+        {/* CW1 */}
+        <div id="project-4" className={styles.ProjectCard}>
+          <div className={styles.projectInner}>
+            <div className={styles.leftContent}>
+              <h2>Image Filtering and Edge Detection</h2>
+              <p>Coursework Project | Mar 2026</p>
+              <ul>
+                <li>Implemented image filtering algorithms including zero padding, convolution, average smoothing, Gaussian smoothing, Sobel edge detection, and binary thresholding for grayscale images.</li>
+                    <li>Developed configurable average and Gaussian smoothing kernels to reduce high-frequency noise before edge detection.</li>
+
+                    <li>Computed horizontal and vertical Sobel gradients and combined them to produce gradient magnitude images for edge detection.</li>
+
+                    <li>Designed an interactive threshold selection tool using an OpenCV trackbar for real-time visualisation of binary edge maps.</li>
+
+                    <li>Compared edge detection results before smoothing and after average and Gaussian smoothing, demonstrating improved suppression of high-frequency texture while preserving object boundaries.</li>
+
+                    <li>Investigated the effect of varying Gaussian σ values and kernel sizes on smoothing strength and edge preservation through controlled experiments.</li>
+                <li>Analysed filtering behaviour using gradient magnitude images and pixel intensity histograms to compare smoothing techniques.</li>
+              </ul>
+            </div>
+
+            <div className={styles.rightTechCard}>
+              <section>
+                <h3>Languages</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
+                  </a>
+                </div>
+              </section>
+              <hr />
+              <section>
+                <h3>Libraries</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://numpy.org/doc/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+                  </a>
+                  <a href="https://pillow.readthedocs.io/en/stable/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Pillow-306998?style=for-the-badge" alt="Pillow" />
+                  </a>
+                  <a href="https://docs.opencv.org/master/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
+                  </a>
+                  <a href="https://matplotlib.org/stable/index.html" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib" />
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+          <div id="project-5" className={styles.ProjectCard}>
+            <div className={styles.projectInner}>
+              <div className={styles.leftContent}>
+                <h2>Hex AI Agent</h2>
+                <p>Group Project | Dec 2025</p>
+                <ul>
+                  <li>Collaborated in a team to develop a Hex AI agent using Monte Carlo Tree Search (MCTS).</li>
+                  <li>Enhanced search efficiency using RAVE statistics, Zobrist-hashed transposition tables, and heuristic-guided move ordering.</li>
+                  <li>Implemented Union-Find data structures for efficient connectivity checking and winner detection during search and rollouts.</li>
+                  <li>Developed adaptive time allocation, move pruning, and endgame heuristics to improve search performance under game time constraints.</li>
+                  <li>Achieved a <strong>94%</strong> win rate over <strong>100</strong> games against the baseline implementation.</li>
+                </ul>
+              </div>
+
+              <div className={styles.rightTechCard}>
+                <section>
+                  <h3>Languages</h3>
+                  <div className={styles.badgeRow}>
+                    <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
+                    </a>
+                  </div>
+                </section>
+
+                <hr />
+
+                <section>
+                  <h3>Libraries</h3>
+                  <div className={styles.badgeRow}>
+                    <a href="https://docs.python.org/3/library/random.html" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/random-7C3AED?style=for-the-badge" alt="random" />
+                    </a>
+
+                    <a href="https://docs.python.org/3/library/math.html" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/math-059669?style=for-the-badge" alt="math" />
+                    </a>
+
+                    <a href="https://docs.python.org/3/library/time.html" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.shields.io/badge/time-2563EB?style=for-the-badge" alt="time" />
+                    </a>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+
+        <div id="project-6" className={styles.ProjectCard}>
+          <div className={styles.projectInner}>
+            <div className={styles.leftContent}>
+              <h2>Movie Genre Classification with Neural Models</h2>
+              <p>Coursework Project | Dec 2025</p>
+              <ul>
+                <li>Implemented multi-label movie genre classification across <strong>8</strong> genres using movie titles and plot synopses.</li>
+                <li>Developed a bidirectional LSTM classifier and fine-tuned pretrained RoBERTa-base and DeBERTa-v3-large transformer models.</li>
+                <li>Applied class-weighted binary cross-entropy loss to address label imbalance during model training.</li>
+                <li>Optimised <strong>8</strong> independent decision thresholds on the validation set to maximise weighted F1 score.</li>
+                <li>Evaluated model performance using weighted F1 score on unseen validation and test datasets.</li>
+                <li>Achieved weighted F1 scores of <strong>0.5182</strong>, <strong>0.5979</strong>, and <strong>0.5938</strong> across the three coursework tasks.</li>
+              </ul>
+            </div>
+
+            <div className={styles.rightTechCard}>
+              <section>
+                <h3>Languages</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
+                  </a>
+                </div>
+              </section>
+
+              <hr />
+
+              <section>
+                <h3>Libraries & Frameworks</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://pytorch.org/docs/stable/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+                  </a>
+
+                  <a href="https://huggingface.co/docs/transformers" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Transformers" />
+                  </a>
+
+                  <a href="https://huggingface.co/docs/datasets" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Datasets-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Datasets" />
+                  </a>
+
+                  <a href="https://scikit-learn.org/stable/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
+                  </a>
+
+                  <a href="https://numpy.org/doc/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+                  </a>
+
+                  <a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+                  </a>
+
+                  <a href="https://www.nltk.org/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/NLTK-154F6B?style=for-the-badge" alt="NLTK" />
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+        <div id="project-7" className={styles.ProjectCard}>
+          <div className={styles.projectInner}>
+            <div className={styles.leftContent}>
+              <h2>Distributional Semantics for Word Similarity</h2>
+              <p>Coursework Project | Oct 2025</p>
+              <ul>
+                <li>Implemented sparse and dense distributional semantic models to estimate similarity between pairs of terms.</li>
+                <li>Developed a TF-IDF Bag-of-Words representation and a Word2Vec Skip-gram model trained on the WikiText-103 corpus.</li>
+                <li>Computed cosine similarity scores for term pairs, including multi-word and previously unseen terms.</li>
+                <li>Applied text preprocessing and tokenisation to construct vector representations for similarity estimation.</li>
+                <li>Achieved <strong>81</strong> and <strong>86</strong> correctly ranked term pairs across the two coursework tasks.</li>
+                <li>Improved performance on challenging multi-word and out-of-vocabulary terms through representation design.</li>
+              </ul>
+            </div>
+
+            <div className={styles.rightTechCard}>
+              <section>
+                <h3>Languages</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
+                  </a>
+                </div>
+              </section>
+
+              <hr />
+
+              <section>
+                <h3>Libraries & Frameworks</h3>
+                <div className={styles.badgeRow}>
+                  <a href="https://www.nltk.org/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/NLTK-154F6B?style=for-the-badge" alt="NLTK" />
+                  </a>
+
+                  <a href="https://radimrehurek.com/gensim/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Gensim-00A67E?style=for-the-badge" alt="Gensim" />
+                  </a>
+
+                  <a href="https://scikit-learn.org/stable/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
+                  </a>
+
+                  <a href="https://numpy.org/doc/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+                  </a>
+
+                  <a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="project-8" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>X-Ray Prohibited Item Detection Platform</h2>
@@ -103,7 +464,7 @@ function Projects() {
           </div>
         </div>
     {/*
-        <div className={styles.ProjectCard}>
+        <div id="project-9" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>A Distributed Booking System for Coordinating Hotel and Band Reservations</h2>
@@ -143,7 +504,7 @@ function Projects() {
         </div>
 
         */}
-        <div className={styles.ProjectCard}>
+        <div id="project-10" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Loan Classification and Soybean Yield Prediction</h2>
@@ -188,7 +549,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className={styles.ProjectCard}>
+        <div id="project-11" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Histogram & Horizon Detection with OpenCV</h2>
@@ -224,7 +585,7 @@ function Projects() {
           </div>
         </div>
 {/*
-        <div className={styles.ProjectCard}>
+        <div id="project-12" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>A Robust Socket-Based Messaging System for Healthcare Professionals</h2>
@@ -263,7 +624,7 @@ function Projects() {
           </div>
         </div>
 */}
-        <div className={styles.ProjectCard}>
+        <div id="project-13" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>BM25 for Retrieval-Augmented Question Answering</h2>
@@ -302,7 +663,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className={styles.ProjectCard}>
+        <div id="project-14" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Features for Estimating Autonomous Vehicle Poses</h2>
@@ -337,7 +698,7 @@ function Projects() {
             </div>
           </div>
         </div>
-        <div className={styles.ProjectCard}>
+        <div id="project-15" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Constraint Satisfaction</h2>
@@ -373,7 +734,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className={styles.ProjectCard}>
+        <div id="project-16" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Othello AI Using Minimax with Alpha-Beta Pruning</h2>
@@ -400,7 +761,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className={styles.ProjectCard}>
+        <div id="project-17" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Kilburnazon Employee Management System</h2>
@@ -445,7 +806,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className={styles.ProjectCard}>
+        <div id="project-18" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Kilburnazon Database Design</h2>
@@ -472,7 +833,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className={styles.ProjectCard}>
+        <div id="project-19" className={styles.ProjectCard}>
             <div className={styles.projectInner}>
                 <div className={styles.leftContent}>
                 <h2>Spam Filter with Naïve Bayes</h2>
@@ -522,7 +883,7 @@ function Projects() {
 
 
 {/*
-        <div className={styles.ProjectCard}>
+        <div id="project-20" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Magic Bakery</h2>
@@ -550,7 +911,7 @@ function Projects() {
         </div>
 */}
 {/*
-        <div className={styles.ProjectCard}>
+        <div id="project-21" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Caching Simulation</h2>
@@ -578,7 +939,7 @@ function Projects() {
         </div>
 */}
 {/*
-        <div className={styles.ProjectCard}>
+        <div id="project-22" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>MU0 Processor Implementation</h2>
@@ -605,7 +966,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className={styles.ProjectCard}>
+        <div id="project-23" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Toucan Crossing Controller (Verilog FSM Design)</h2>
@@ -632,7 +993,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className={styles.ProjectCard}>
+        <div id="project-24" className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Pong Game</h2>
@@ -679,3 +1040,7 @@ function Projects() {
 }
 
 export default Projects;
+
+
+
+
