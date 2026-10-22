@@ -1,3 +1,15 @@
+# Consistent project layout and website structure
+
+Checkpoint: 22dd97f. All six projects share the same 45/55 visual-left/content-right grid above 900px, and visual-first stacking below it. No project-specific full-width layouts remain.
+
+NLI now illustrates premise, hypothesis and entailment, with small numeric Macro-F1 comparisons. Movie Genre uses three compact alternative model tracks and a shared eight-label output. Booking uses four separate one-way paths, with coral requests and blue responses. Stereo retains all four genuine assets. Hex displays complete, uncropped originals in chronological DOM order, with a larger later-game image and two supporting views; all images have an accessible native dialog for original-resolution inspection and an original-file link. The dialog supports Escape.
+
+No genuine Kilburnazon screenshot was supplied. Its fictional employee interface was removed in favour of a workflow illustration grounded in the unchanged project description. Python standard-library module badges were removed from Hex.
+
+Education & Recognition contains the degree (2026) and scholarship (2021 to 2026), using the dates supplied in the latest user brief. The Udemy entry and Contact section were removed. The three genuine certificate entries and PDFs remain. Footer retains the monogram, copyright, GitHub and Email. Legacy Contact fragments point to the footer. Hero, About, six project descriptions, technology branding and cinematic artwork are retained.
+
+Older design records below describe superseded implementations.
+
 # Final project visual refinements
 
 Checkpoint before these changes: a07707f.

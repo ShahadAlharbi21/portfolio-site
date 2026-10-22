@@ -4,13 +4,13 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
-import Contact from './components/Contact';
+import Education from './components/Education';
 import Footer from './components/Footer';
 
 export default function App() {
   useEffect(() => {
     // Retain links shared before the page was consolidated.
-    const legacy = { '/about': 'about', '/projects': 'projects', '/certificates': 'certificates', '/contact': 'contact', work: 'projects' };
+    const legacy = { '/about': 'about', '/projects': 'projects', '/certificates': 'certificates', '/contact': 'footer', contact: 'footer', work: 'projects' };
     function resolveAnchor() {
       const target = legacy[window.location.hash.slice(1)];
       if (!target) return;
@@ -34,7 +34,7 @@ export default function App() {
           <a className="work-link" href="#projects">Projects</a>
         </div>
       </section>
-      <About /><Skills /><Projects /><Certificates /><Contact />
+      <About /><Skills /><Projects /><Education /><Certificates />
     </main>
     <Footer />
   </>;

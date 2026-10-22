@@ -1,28 +1,33 @@
+import { useRef } from 'react';
 import { projectImages } from './project-images';
 
-function ProjectImage({ file, alt, label, focus }) {
+function ProjectImage({ file, alt, label }) {
+  const viewer = useRef(null);
   const [width, height] = projectImages[file];
   const src = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/projects/${file}`;
-  const image = <img src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" style={focus ? { width: `${width / focus.width * 100}%`, left: `${-focus.x / focus.width * 100}%`, top: `${-focus.y / focus.height * 100}%` } : undefined} />;
   return <figure className="asset-panel">
-    <a href={src} target="_blank" rel="noopener noreferrer" title="Open original image" className={focus ? 'board-focus' : undefined} style={focus ? { aspectRatio: `${focus.width} / ${focus.height}` } : undefined}>{image}</a>
+    <a href={src} target="_blank" rel="noopener noreferrer" title="View at original resolution" onClick={event => { if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return; event.preventDefault(); viewer.current.showModal(); }}><img src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" /></a>
     {label && <figcaption>{label}</figcaption>}
+    <dialog ref={viewer} className="image-viewer" aria-label="Project image at original resolution" onClick={event => { if (event.target === viewer.current) viewer.current.close(); }}>
+      <div className="image-viewer-toolbar"><a href={src} target="_blank" rel="noopener noreferrer">Open original image</a><button type="button" onClick={() => viewer.current.close()} aria-label="Close image viewer">Close</button></div>
+      <div className="image-viewer-content"><img className="image-viewer-image" src={src} alt={alt} width={width} height={height} loading="lazy" /></div>
+    </dialog>
   </figure>;
 }
 
 function NliVisual() {
-  return <>
-    <div className="example-copy"><p className="visual-note">Illustrative example</p>
-      <dl><dt>Premise</dt><dd>Two people are sitting in a café talking.</dd><dt>Hypothesis</dt><dd>Two people are having a conversation.</dd></dl>
-      <p className="example-label">Entailment (1)</p>
-    </div>
-    <div className="score-chart" role="img" aria-label="Development-set Macro-F1 from the project poster: SVM 0.6379, DeBERTa-v3-large 0.9187, on a zero-to-one scale.">
-      <p>Macro-F1</p>
-      <div className="score-row"><span>SVM</span><strong>0.6379</strong><div className="score-track"><i style={{ width: '63.79%' }} /></div></div>
-      <div className="score-row"><span>DeBERTa-v3-large</span><strong>0.9187</strong><div className="score-track"><i style={{ width: '91.87%' }} /></div></div>
-      <div className="chart-scale"><span>0</span><span>1</span></div>
-    </div>
-  </>;
+  return <div className="nli-research">
+    <p className="visual-note">Illustrative example</p>
+    <ol className="nli-process">
+      <li><h4>Premise</h4><p>Two people are sitting in a cafأ© talking.</p></li>
+      <li><h4>Hypothesis</h4><p>Two people are having a conversation.</p></li>
+      <li className="nli-inference"><h4>Inference</h4><p>Entailment</p></li>
+    </ol>
+    <dl className="nli-comparison" aria-label="Verified development-set Macro-F1 scores">
+      <div><dt>SVM <span>Macro-F1</span></dt><dd>0.6379</dd></div>
+      <div><dt>DeBERTa-v3-large <span>Macro-F1</span></dt><dd>0.9187</dd></div>
+    </dl>
+  </div>;
 }
 
 function StereoVisual() {
@@ -39,54 +44,63 @@ function StereoVisual() {
 }
 
 const genres = ['Comedy', 'Cult', 'Flashback', 'Historical', 'Revenge', 'Romantic', 'Sci-Fi', 'Violence'];
-const pipelines = [
-  { name: 'BiLSTM', className: 'pipeline-lstm', stages: ['Text Cleaning', 'Token IDs', 'Embedding', 'BiLSTM', 'Dropout', 'Classification Head'], note: 'Vocabulary-based token IDs' },
-  { name: 'RoBERTa-base', className: 'pipeline-roberta', stages: ['RoBERTa Tokenizer', 'RoBERTa-base', 'Classification Head'], note: 'Token IDs + attention masks' },
-  { name: 'DeBERTa-v3-large', className: 'pipeline-deberta', stages: ['DeBERTa Tokenizer', 'DeBERTa-v3-large', 'Classification Head'], note: 'Token IDs + attention masks' },
+const architectures = [
+  { name: 'BiLSTM', type: 'recurrent', stages: ['Tokenisation', 'Embedding', 'Bidirectional LSTM', 'Classification Head'] },
+  { name: 'RoBERTa-base', type: 'roberta', stages: ['RoBERTa Tokenizer', 'RoBERTa-base', 'Classification Head'] },
+  { name: 'DeBERTa-v3-large', type: 'deberta', stages: ['DeBERTa Tokenizer', 'DeBERTa-v3-large', 'Classification Head'] },
 ];
 function MovieVisual() {
-  return <div className="movie-research-graphic">
-    <div className="architecture-caption"><span>Three alternative models</span><span className="movie-result"><strong>0.5979</strong> Best weighted F1</span></div>
-    <div className="movie-architecture" aria-label="Three independent neural models for the same eight-label classification task, not an ensemble.">
-      <div className="shared-input"><h4>Shared Input</h4><div><span>Movie Title</span><span>Plot Synopsis</span></div></div>
-      <div className="model-pipelines">{pipelines.map(pipeline => <div className={`model-pipeline ${pipeline.className}`} key={pipeline.name}>
-        <div className="pipeline-heading"><h4>{pipeline.name}</h4><span>{pipeline.note}</span></div>
-        <ol className="pipeline-stages">{pipeline.stages.map(stage => <li key={stage}><span>{stage}</span></li>)}</ol>
-        <div className="pipeline-output"><span>8 logits</span><i aria-hidden="true" /></div>
-      </div>)}</div>
-      <div className="genre-output"><h4>Multi-label Classification</h4><ul>{genres.map(genre => <li key={genre}><i aria-hidden="true" />{genre}</li>)}</ul></div>
-    </div>
-    <div className="architecture-methods"><span>Transformers: class-weighted BCE</span><span>Sigmoid</span><span>Per-genre thresholds</span></div>
+  return <div className="compact-neural">
+    <div className="neural-input"><span>Movie Title</span><b aria-hidden="true">+</b><span>Plot Synopsis</span></div>
+    <p className="visual-note neural-alternatives">Three alternative architectures</p>
+    <div className="neural-tracks">{architectures.map(model => <div className={`neural-track neural-${model.type}`} key={model.name}>
+      <div className="neural-track-heading"><h4>{model.name}</h4>
+        {model.type === 'recurrent' ? <svg viewBox="0 0 100 26" role="img" aria-label="Forward and backward sequence processing"><path d="M5 6H94L88 1M94 6L88 11M95 20H6L12 15M6 20L12 25" /></svg> : <svg viewBox="0 0 100 26" role="img" aria-label="Transformer encoder layers"><path d="M10 3H90V9H10ZM17 11H83V17H17ZM24 19H76V25H24Z" /></svg>}
+      </div>
+      <ol className="neural-stages">{model.stages.map(stage => <li key={stage}>{stage}</li>)}</ol>
+    </div>)}</div>
+    <div className="neural-output"><div><span>8 movie genres</span><div className="genre-indicators" aria-label={genres.join(', ')}>{genres.map(genre => <i key={genre} title={genre} aria-hidden="true" />)}</div></div><p><strong>0.5979</strong><span>Best weighted F1</span></p></div>
   </div>;
 }
 
 function HexVisual() {
-  return <>
-    <div className="hex-sequence">
-      <ProjectImage file="hex/start.png" alt="Actual Hex opening board before the first move. Open for the complete terminal screenshot." label="Start" focus={{ x: 20, y: 128, width: 540, height: 390 }} />
-      <ProjectImage file="hex/midgame.png" alt="Actual Hex board after turn eight, with red and blue moves. Open for the complete terminal screenshot." label="Midgame" focus={{ x: 20, y: 88, width: 540, height: 380 }} />
-      <ProjectImage file="hex/later-game.png" alt="Actual later Hex board from the same run. Open for the complete terminal screenshot." label="Later Game" focus={{ x: 20, y: 315, width: 550, height: 380 }} />
-    </div>
-    <p className="hex-result"><strong>94%</strong> win rate against baseline, 100 games</p>
-  </>;
+  return <div className="hex-progression">
+    <ProjectImage file="hex/start.png" alt="Complete original terminal screenshot of the Hex opening board and first move, including command, headings and coordinates." label="Start" />
+    <ProjectImage file="hex/midgame.png" alt="Complete original terminal screenshot of Hex turns eight and nine with all board coordinates and log text." label="Midgame" />
+    <ProjectImage file="hex/later-game.png" alt="Complete original terminal screenshot of the later Hex game state, final board and game log." label="Later Game" />
+  </div>;
 }
 
 function EmployeeVisual() {
-  return <><p className="visual-note">Conceptual interface</p><div className="employee-interface"><h4>Employee records</h4><div className="mock-search">Search by employee, department or role</div><div className="mock-table"><div><span>Employee</span><span>Department</span><span>Leave</span></div><div><span>Example A</span><span>Engineering</span><span>Pending</span></div><div><span>Example B</span><span>Operations</span><span>Approved</span></div></div><div className="mock-workflows"><span>Review leave requests</span><span>Payroll reports<br /><small>PDF / CSV export</small></span></div></div></>;
+  return <div className="employee-workflows">
+    <div className="workflow-title"><span>PHP / MySQL</span><h4>Employee Management</h4></div>
+    <div className="employee-capabilities"><div><span>01</span><h4>Employee records</h4><p>Search &amp; CRUD</p></div><div><span>02</span><h4>Leave requests</h4><p>Approval &amp; holiday tracking</p></div><div><span>03</span><h4>Payroll reporting</h4><p>PDF &amp; CSV exports</p></div></div>
+    <div className="archive-workflow"><span>Record deletion</span><i aria-hidden="true" /><span>MySQL trigger</span><i aria-hidden="true" /><span>Archive</span></div>
+  </div>;
 }
 
 function BookingVisual() {
   return <>
-    <div className="booking-screenshots">
-      <ProjectImage file="booking/main-menu.png" alt="Genuine Wedding Planner terminal main menu, showing booking, availability, cancellation and earliest-slot actions." />
-      <ProjectImage file="booking/hotel-booking.png" alt="Genuine Wedding Planner hotel booking prompt asking for a hotel slot ID." />
-    </div>
-    <svg className="booking-service-map" viewBox="0 0 440 120" role="img" aria-label="Client sends requests to hotel and band services, which return availability and booking responses.">
-      <defs><marker id="booking-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#789daf" /></marker></defs>
-      <g fill="none" stroke="#789daf"><rect x="156" y="6" width="128" height="32" /><rect x="10" y="82" width="160" height="30" /><rect x="270" y="82" width="160" height="30" /></g>
-      <g fill="#f5f0e6" fontSize="12" textAnchor="middle"><text x="220" y="27">Client</text><text x="90" y="102">Hotel service</text><text x="350" y="102">Band service</text></g>
-      <g fill="none" stroke="#789daf" strokeWidth="1" markerStart="url(#booking-arrow)" markerEnd="url(#booking-arrow)"><path d="M179 40L109 79" /><path d="M261 40L331 79" /></g>
+    <svg className="booking-architecture" viewBox="0 0 440 300" role="img" aria-label="Client at top communicates with Hotel Service and Band Service. For each service a coral request arrow points from client to service, and a separate blue response arrow points from service to client.">
+      <defs>
+        <marker id="request-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#ed8d83" /></marker>
+        <marker id="response-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9fbfd1" /></marker>
+      </defs>
+      <g className="service-nodes"><rect x="145" y="15" width="150" height="65" rx="3" /><rect x="5" y="225" width="195" height="65" rx="3" /><rect x="240" y="225" width="195" height="65" rx="3" /></g>
+      <g className="service-icons"><path d="M164 35L171 41L164 47M176 47H187" /><path d="M22 269V245H44V269M18 269H48M28 250H31M36 250H39M28 257H31M36 257H39" /><path d="M264 266V244L281 240V262M264 247L281 243M264 265C256 260 253 271 260 270M281 261C273 256 270 267 277 266" /></g>
+      <g fill="#f5f0e6" fontSize="18" textAnchor="middle"><text x="232" y="55">Client</text><text x="118" y="263">Hotel Service</text><text x="348" y="263">Band Service</text></g>
+      <g fill="none" strokeWidth="1.5">
+        <path data-direction="request" d="M174 82C135 110 55 142 55 222" stroke="#ed8d83" markerEnd="url(#request-arrow)" />
+        <path data-direction="response" d="M125 222C125 159 203 132 203 83" stroke="#9fbfd1" markerEnd="url(#response-arrow)" />
+        <path data-direction="request" d="M266 82C305 110 385 142 385 222" stroke="#ed8d83" markerEnd="url(#request-arrow)" />
+        <path data-direction="response" d="M315 222C315 159 237 132 237 83" stroke="#9fbfd1" markerEnd="url(#response-arrow)" />
+      </g>
+      <g fontSize="15"><text x="9" y="151" fill="#ed8d83">Request</text><text x="150" y="204" fontSize="14" fill="#9fbfd1">Response</text><text x="374" y="151" fill="#ed8d83">Request</text><text x="290" y="204" fontSize="14" textAnchor="end" fill="#9fbfd1">Response</text></g>
     </svg>
+    <div className="booking-support">
+      <ProjectImage file="booking/main-menu.png" alt="Genuine Wedding Planner main menu, with booking and availability actions." />
+      <ProjectImage file="booking/hotel-booking.png" alt="Genuine Wedding Planner hotel reservation prompt." />
+    </div>
   </>;
 }
 

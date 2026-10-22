@@ -111,14 +111,6 @@ const projects = [
         [
           "Python"
         ]
-      ],
-      [
-        "Libraries & Frameworks",
-        [
-          "random",
-          "math",
-          "time"
-        ]
       ]
     ]
   },
