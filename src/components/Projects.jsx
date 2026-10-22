@@ -1,19 +1,21 @@
+import ProjectVisual from './ProjectVisual';
 import styles from './StyleSheet.module.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-function Projects() {
+function Projects({ embedded = false }) {
   return (
     <>
-      <NavBar />
+      {!embedded && <NavBar />}
 
-      <section className={styles.projectsSection}>
-        <h1>Projects</h1>
+      <section id="work" className={styles.projectsSection}>
+        <div className="section-heading"><div><p className="eyebrow">01 / IDEAS INTO IMPLEMENTATION</p><h2>Selected <em>work.</em></h2></div><p>Computer vision, machine learning, and software.<br/>The questions I've explored. The systems I've built.</p></div>
 
         {/* CW3 */}
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={1} title="Stereo Vision and 3D Scene Reconstruction" />
               <h2>Stereo Vision and 3D Scene Reconstruction</h2>
               <p>Coursework Project | May 2026</p>
               <ul>
@@ -58,6 +60,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={2} title="Harris Corner Detection and Feature Matching" />
               <h2>Harris Corner Detection and Feature Matching</h2>
               <p>Coursework Project | Apr 2026</p>
               <ul>
@@ -104,7 +107,8 @@ function Projects() {
           <div className={styles.ProjectCard}>
             <div className={styles.projectInner}>
               <div className={styles.leftContent}>
-                <h2>CNN Image Classification on CIFAR-100</h2>
+                <ProjectVisual index={3} title="CNN Image Classification on CIFAR-100" />
+              <h2>CNN Image Classification on CIFAR-100</h2>
                 <p>Coursework Project | Apr 2026</p>
                 <ul>
                   <li>Designed and implemented a convolutional neural network to classify images across <strong>100</strong> object categories.</li>
@@ -156,6 +160,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={4} title="Image Filtering and Edge Detection" />
               <h2>Image Filtering and Edge Detection</h2>
               <p>Coursework Project | Mar 2026</p>
               <ul>
@@ -207,7 +212,8 @@ function Projects() {
           <div className={styles.ProjectCard}>
             <div className={styles.projectInner}>
               <div className={styles.leftContent}>
-                <h2>Hex AI Agent</h2>
+                <ProjectVisual index={5} title="Hex AI Agent" />
+              <h2>Hex AI Agent</h2>
                 <p>Group Project | Dec 2025</p>
                 <ul>
                   <li>Collaborated in a team to develop a Hex AI agent using Monte Carlo Tree Search (MCTS).</li>
@@ -254,6 +260,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={6} title="Movie Genre Classification with Neural Models" />
               <h2>Movie Genre Classification with Neural Models</h2>
               <p>Coursework Project | Dec 2025</p>
               <ul>
@@ -317,6 +324,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={7} title="Distributional Semantics for Word Similarity" />
               <h2>Distributional Semantics for Word Similarity</h2>
               <p>Coursework Project | Oct 2025</p>
               <ul>
@@ -373,6 +381,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={8} title="X-Ray Prohibited Item Detection Platform" />
               <h2>X-Ray Prohibited Item Detection Platform</h2>
               <p>Solo Project | Jul 2025 – Present</p>
               <ul>
@@ -466,6 +475,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={9} title="A Distributed Booking System for Coordinating Hotel and Band Reservations" />
               <h2>A Distributed Booking System for Coordinating Hotel and Band Reservations</h2>
               <p>Coursework Project | Apr 2025 – May 2025</p>
               <ul>
@@ -506,6 +516,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={10} title="Loan Classification and Soybean Yield Prediction" />
               <h2>Loan Classification and Soybean Yield Prediction</h2>
               <p>Coursework Project | Apr 2025 – Apr 2025</p>
               <ul>
@@ -551,6 +562,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={11} title="Histogram & Horizon Detection with OpenCV" />
               <h2>Histogram & Horizon Detection with OpenCV</h2>
               <p>Coursework Project | Apr 2025 – Apr 2025</p>
               <ul>
@@ -587,6 +599,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={12} title="A Robust Socket-Based Messaging System for Healthcare Professionals" />
               <h2>A Robust Socket-Based Messaging System for Healthcare Professionals</h2>
               <p>Coursework Project | Mar 2025 – Mar 2025</p>
               <ul>
@@ -626,6 +639,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={13} title="BM25 for Retrieval-Augmented Question Answering" />
               <h2>BM25 for Retrieval-Augmented Question Answering</h2>
               <p>Coursework Project | Dec 2024 – Dec 2024</p>
               <ul>
@@ -665,6 +679,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={14} title="Features for Estimating Autonomous Vehicle Poses" />
               <h2>Features for Estimating Autonomous Vehicle Poses</h2>
               <p>Coursework Project | Nov 2024 – Nov 2024</p>
               <ul>
@@ -700,6 +715,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={15} title="Constraint Satisfaction" />
               <h2>Constraint Satisfaction</h2>
               <p>Coursework Project | Nov 2024 – Nov 2024</p>
               <ul>
@@ -736,6 +752,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={16} title="Othello AI Using Minimax with Alpha-Beta Pruning" />
               <h2>Othello AI Using Minimax with Alpha-Beta Pruning</h2>
               <p>Coursework Project | Oct 2024 – Oct 2024</p>
               <ul>
@@ -763,6 +780,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={17} title="Kilburnazon Employee Management System" />
               <h2>Kilburnazon Employee Management System</h2>
               <p>Coursework Project | Dec 2024 – Dec 2024</p>
               <ul>
@@ -808,6 +826,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={18} title="Kilburnazon Database Design" />
               <h2>Kilburnazon Database Design</h2>
               <p>Coursework Project | Oct 2024 – Oct 2024</p>
               <ul>
@@ -835,7 +854,8 @@ function Projects() {
         <div className={styles.ProjectCard}>
             <div className={styles.projectInner}>
                 <div className={styles.leftContent}>
-                <h2>Spam Filter with Naïve Bayes</h2>
+                <ProjectVisual index={19} title="Spam Filter with Naïve Bayes" />
+              <h2>Spam Filter with Naïve Bayes</h2>
                 <p>Coursework Project | Apr 2024 – Apr 2024</p>
                 <ul>
                     <li>Developed a Naïve Bayes spam filter from scratch in Python, without scikit-learn.</li>
@@ -885,6 +905,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={20} title="Magic Bakery" />
               <h2>Magic Bakery</h2>
               <p>Coursework Project | Apr 2024 – Apr 2024</p>
               <ul>
@@ -913,6 +934,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={21} title="Caching Simulation" />
               <h2>Caching Simulation</h2>
               <p>Coursework Project | Apr 2024 – Apr 2024</p>
               <ul>
@@ -941,6 +963,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={22} title="MU0 Processor Implementation" />
               <h2>MU0 Processor Implementation</h2>
               <p>Coursework Project | Nov 2023 – Nov 2023</p>
               <ul>
@@ -968,6 +991,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={23} title="Toucan Crossing Controller (Verilog FSM Design)" />
               <h2>Toucan Crossing Controller (Verilog FSM Design)</h2>
               <p>Coursework Project | Nov 2023 – Nov 2023</p>
               <ul>
@@ -995,6 +1019,7 @@ function Projects() {
         <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
+              <ProjectVisual index={24} title="Pong Game" />
               <h2>Pong Game</h2>
               <p>Coursework Project | Oct 2023 – Nov 2023</p>
               <ul>
@@ -1033,7 +1058,7 @@ function Projects() {
     */}
       </section>
 
-      <Footer />
+      {!embedded && <Footer />}
     </>
   );
 }

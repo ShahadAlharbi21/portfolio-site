@@ -1,12 +1,2 @@
-import '../App.css';
-import react from 'react';
-import styles from'./StyleSheet.module.css';
-function Footer() {
-    return ( <>
-        <footer className={styles.footer}>
-            <b>© 2025, Shahad Alharbi</b>
-        </footer>
-    </>
-    );
-};
-export default Footer;
+import styles from './StyleSheet.module.css';
+export default function Footer() { return <footer className={styles.footer}><a className="wordmark" href="#/about">s<span>.</span>a</a><span>© {new Date().getFullYear()} Shahad Alharbi</span><a href="https://github.com/ShahadAlharbi21" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:shahad_100hr@outlook.com">Email ↗</a></footer>; }

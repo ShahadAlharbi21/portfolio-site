@@ -8,7 +8,7 @@ function Skills() {
         <div className={styles.skillGroup}>
           <h2>Skills</h2>
           <h3>Languages</h3>
-          <p id="paragraph">I have used the following languages in my projects:</p>
+          <p>I have used the following languages in my projects:</p>
           <div className={styles.badges}>
             <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">
               <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" className={styles.badgeImage} />
@@ -38,7 +38,7 @@ function Skills() {
 
         <div className={styles.skillGroup}>
           <h3>Libraries & Frameworks</h3>
-          <p id="paragraph">In addition to small libraries, I’ve worked with the following frameworks and libraries in my projects:</p>
+          <p>In addition to small libraries, Iâ€™ve worked with the following frameworks and libraries in my projects:</p>
           <div className={styles.badges}>
             <a href="https://docs.djangoproject.com/en/stable/" target="_blank" rel="noopener noreferrer">
               <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" className={styles.badgeImage} />
@@ -53,22 +53,22 @@ function Skills() {
               <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" className={styles.badgeImage} />
             </a>
             <a href="https://numpy.org/doc/" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" className={styles.badgeImage} />
+              <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" className={styles.badgeImage} />
             </a>
             <a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" className={styles.badgeImage} />
+              <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" className={styles.badgeImage} />
             </a>
             <a href="https://matplotlib.org/stable/users/index.html" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" className={styles.badgeImage} />
+              <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib" className={styles.badgeImage} />
             </a>
             <a href="https://seaborn.pydata.org/" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=seaborn&logoColor=white" className={styles.badgeImage} />
+              <img src="https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn" className={styles.badgeImage} />
             </a>
             <a href="https://plotly.com/python/" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" className={styles.badgeImage} />
+              <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly" className={styles.badgeImage} />
             </a>
             <a href="https://github.com/santosjorge/cufflinks" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.shields.io/badge/Cufflinks-268bd2?style=for-the-badge&logoColor=white" className={styles.badgeImage} />
+              <img src="https://img.shields.io/badge/Cufflinks-268bd2?style=for-the-badge&logoColor=white" alt="Cufflinks" className={styles.badgeImage} />
             </a>
             <a href="https://www.tensorflow.org/api_docs" target="_blank" rel="noopener noreferrer">
               <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" className={styles.badgeImage} />
@@ -88,7 +88,7 @@ function Skills() {
 
         <div className={styles.skillGroup}>
           <h3 id="skills-header3">Databases</h3>
-          <p id="paragraph">These are the databases I’ve used in my projects:</p>
+          <p>These are the databases Iâ€™ve used in my projects:</p>
           <div className={styles.badges}>
             <a href="https://dev.mysql.com/doc/" target="_blank" rel="noopener noreferrer">
               <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" className={styles.badgeImage} />
@@ -109,7 +109,7 @@ function Skills() {
 
         <div className={styles.skillGroup}>
           <h3 id="skills-header3">Tools</h3>
-          <p id="paragraph">Tools I’ve worked with during development and report writing:</p>
+          <p>Tools Iâ€™ve worked with during development and report writing:</p>
           <div className={styles.badges}>
             <a href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer">
               <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" className={styles.badgeImage} />

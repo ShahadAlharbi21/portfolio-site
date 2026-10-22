@@ -1,38 +1,8 @@
-import styles from './StyleSheet.module.css';
 import Skills from './Skills';
 import NavBar from './NavBar';
 import Footer from './Footer';
-{/*import Resume from '../assets/Shahad_Dhwihi_S_Alharbi_Resume.pdf';*/}
-
-
-
-function About() {
-  return(
-    <>
-  <NavBar/>
-  <section className={styles.container}>
-    <div className={styles.info}>
-        <h1>
-            <b>Shahad Alharbi</b>
-        </h1>
-        <h2>
-            <b>Computer Science student at the University of Manchester.</b>
-        </h2>
-        <div className={styles.limitWidth}>
-            <p>I’m currently in my final year of a Computer Science degree at the University of Manchester, supported by a competitive scholarship from NEOM. Throughout my studies, I’ve developed strong programming skills, demonstrated through various solo and coursework projects. I’m especially interested in Data Science and Machine Learning.</p>
-        </div>
-        {/*<a href={Resume} download>
-            <button className="hover">Resume</button>
-        </a>*/}
-
-    </div>
-
-  </section>
-  <Skills/>
-  <Footer/>
-  </>
-  );
-  
+import Projects from './Projects';
+import TypingIdentity from './TypingIdentity';
+export default function About() {
+ return <><NavBar/><main id="main-content"><section className="hero" aria-labelledby="hero-name"><div className="hero-copy"><p className="eyebrow">SHAHAD ALHARBI / ENGINEERING PORTFOLIO</p><h1 id="hero-name">A curious mind.<br/>A world of<br/><em>possibilities.</em></h1><div className="hero-identity"><h2>Hi, I'm Shahad Alharbi.</h2><TypingIdentity/><p>Computer Science graduate from the University of Manchester, exploring the possibilities of AI and software engineering.</p></div><a className="work-link" href="#work" onClick={e => {e.preventDefault(); document.getElementById('work').scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});}}>Explore my work <span>↓</span></a></div><div className="scene-caption"><span>01 / A DIFFERENT PERSPECTIVE</span><span>Where curiosity finds its horizon.</span></div></section><div className="intro-strip"><span>COMPUTER SCIENCE</span><span>ARTIFICIAL INTELLIGENCE</span><span>SOFTWARE ENGINEERING</span></div><Projects embedded/><section className="education"><p className="eyebrow">02 / THE FOUNDATION</p><h2>Rooted in learning.<br/><em>Driven by curiosity.</em></h2><div><h3>The University of Manchester</h3><p>Computer Science graduate</p><p>Supported by a competitive scholarship from NEOM. My studies and solo and coursework projects have shaped my programming skills and my interest in Data Science and Machine Learning.</p><a href="#/certificates">Education & achievements ↗</a></div></section><Skills/><section className="contact-banner"><p className="eyebrow">03 / WHAT COMES NEXT</p><h2>Good things start<br/>with a <em>conversation.</em></h2><a href="mailto:shahad_100hr@outlook.com">Let's connect ↗</a></section></main><Footer/></>;
 }
-
-export default About

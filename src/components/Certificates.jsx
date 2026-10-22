@@ -1,4 +1,3 @@
-import React from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import styles from './StyleSheet.module.css';
@@ -12,7 +11,7 @@ return (
         <h1>Certificates</h1>
             <div className={styles.CourseCard}>
                 <h2>Python for Data Science and Machine Learning Bootcamp</h2>
-                <p><em>Offered by Udemy — <strong>In Progress</strong></em></p>
+                <p><em>Offered by Udemy â€” <strong>In Progress</strong></em></p>
                 <ul>
                     <li>Gaining hands-on experience in <strong>Python programming</strong> for data science workflows.</li>
                     <li>Applying <strong>NumPy</strong> and <strong>Pandas</strong> for numerical computing, data manipulation, and analysis.</li>
