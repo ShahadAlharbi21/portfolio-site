@@ -1,17 +1,16 @@
-import NavBar from './NavBar';
-import Footer from './Footer';
 import styles from './StyleSheet.module.css';
 
 function Certificates() {
 return ( 
 <>
-    <NavBar/>
+
     
-    <section className={styles.CertificatesSection}>
-        <h1>Certificates</h1>
+    <section id="certificates" className={styles.CertificatesSection} aria-labelledby="certificates-heading">
+        <h2 id="certificates-heading" className="plain-section-title">Certificates</h2>
+        <div className="recognition"><div><h3>University of Manchester</h3><p>BSc (Hons) Computer Science, First-Class Honours</p></div><div><h3>NEOM International Scholarship Programme</h3><p>Scholarship recipient</p></div></div>
             <div className={styles.CourseCard}>
-                <h2>Python for Data Science and Machine Learning Bootcamp</h2>
-                <p><em>Offered by Udemy â€” <strong>In Progress</strong></em></p>
+                <h3>Python for Data Science and Machine Learning Bootcamp</h3>
+                <p><em>Offered by Udemy | <strong>In Progress</strong></em></p>
                 <ul>
                     <li>Gaining hands-on experience in <strong>Python programming</strong> for data science workflows.</li>
                     <li>Applying <strong>NumPy</strong> and <strong>Pandas</strong> for numerical computing, data manipulation, and analysis.</li>
@@ -32,7 +31,7 @@ return (
             </div>
 
         <div className={styles.CourseCard}>
-            <h2>Supervised Machine Learning: Regression and Classification</h2>
+            <h3>Supervised Machine Learning: Regression and Classification</h3>
             <p><em>Offered by DeepLearning.AI on Coursera</em></p>
             <ul>
                 <li>Learnt to distinguish between <strong>regression</strong> and <strong>classification</strong> tasks within supervised learning.</li>
@@ -48,7 +47,7 @@ return (
 
 
         <div className={styles.CourseCard2}>
-            <h2> Advanced Learning Algorithms</h2>
+            <h3> Advanced Learning Algorithms</h3>
             <p><em>Offered by DeepLearning.AI on Coursera</em></p>
             <ul>
                 <li>Built and trained a neural network with TensorFlow to perform multi-class classification.</li>
@@ -64,7 +63,7 @@ return (
 
 
         <div className={styles.CourseCard3}>
-            <h2>Student Hackathon 2025</h2>
+            <h3>Student Hackathon 2025</h3>
             <p><em>Offered by The University of Manchester</em></p>
             <ul>
                 <li>Collaborated in a team of 4 to build a simple AI powered tool that assists people with visual impairments in daily tasks using the Neuphonics library.</li>
@@ -75,7 +74,7 @@ return (
         </div>
     </section>
 
-    <Footer/>
+
 </>
 );
 };

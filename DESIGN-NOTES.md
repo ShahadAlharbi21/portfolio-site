@@ -1,3 +1,17 @@
+# Current refinement
+
+The cinematic artwork, font imports, colour palette and wordmark are retained. The current page order is Hero, About, Skills, Projects, Certificates, Contact. Navigation uses section anchors; legacy section URLs are redirected to their anchors.
+
+The hero now shows Shahad Alharbi and a static professional identity. The typing component and blinking cursor were removed. About includes only the personal, academic and scholarship information supplied by the user.
+
+Exactly six projects are displayed, one per row. Technical descriptions, dates, labels and metrics follow the refinement brief. All examples, interface concepts and schematic outputs are labelled. No experimental images or model predictions are claimed. The Hex visual uses a valid adjacent-cell connection on a rhombic hexagonal board. Dependencies for Hex retain Python standard-library random, math and time from the original project information.
+
+The previous course descriptions, three working certificate PDFs, GitHub link, email address, authentic logo assets and theme control are retained. First-Class Honours and the NEOM scholarship are supported by the user brief. No evidence for the two additional excellence awards or award dates exists in the checkout, so none was invented.
+
+Pre-refinement checkpoint: b69c7d6.
+
+The earlier design record and exact artwork-generation prompt follow for provenance; its description of project counts and typing refers to the superseded version.
+
 # Creative direction
 
 The previous implementation repeated navy containers, small system typography and text-plus-badge layouts. The redesign uses original twilight scenery, ivory editorial pages, coral wayfinding, indigo project art, and amber contact accents. The first engineering study spans the gallery, followed by paired studies and a complete open archive. All 17 previously active projects retain their original technical descriptions and technology badges. Previously commented-out projects remain commented out.
