@@ -1,0 +1,38 @@
+{
+  "stereo/left.png": {
+    "source": "CW3/comp37212_coursework3.pdf, Figure 2(a), original embedded image",
+    "sha256": "56d177b04ba41a0a7ea727431403ecf565a6c72419071a35ead122122984deaf"
+  },
+  "stereo/right.png": {
+    "source": "CW3/umbrella-right.png",
+    "sha256": "fa4dba6122e1c27f95c7ce748c34ed99289a86d7fedfaed0d9f0fb5179bc2048"
+  },
+  "stereo/disparity.png": {
+    "source": "CW3/umbrella/nocanny/n64/disparity_noCanny_numDisparities_64_blockSize_13.png",
+    "sha256": "c470acb56fb80adbd4850af06e032202f48fd7fc8c93493d42b23cf07c2ae364"
+  },
+  "stereo/reconstruction.png": {
+    "source": "CW3/umbrella_3d_view_noCanny.png",
+    "sha256": "0c333115704ed88908fb280190e460e6bc1bc0265f438afa6e882ff2c10dd788"
+  },
+  "hex/start.png": {
+    "source": "Hex AI/Hex_Game_Start.png",
+    "sha256": "01de42113b4007e6512b3cab888472af871d1ed1aa335725d7764a5f482960bd"
+  },
+  "hex/midgame.png": {
+    "source": "Hex AI/Hex_Game_1.png",
+    "sha256": "1f5c43fb9902986a73726f459079e9f34128f67ea65296862fc1e2603eec0631"
+  },
+  "hex/later-game.png": {
+    "source": "Hex AI/Hex_Game_2.png",
+    "sha256": "eb49b06f1908000318a7718296b9baca4a96b7ab0f495d5277c8c9c1a0d4e26a"
+  },
+  "booking/main-menu.png": {
+    "source": "ds/Wedding_Planner_Main_Menu.png",
+    "sha256": "37fcfdb89f5613435810917f77cef71e413906a505211368c089710470e96444"
+  },
+  "booking/hotel-booking.png": {
+    "source": "ds/Wedding_Planner_Hotel_Booking_Prompt.png",
+    "sha256": "cbd0801eb4ab199c183d3d45005c000fa021219dd387ae351f7383e6f953ccd4"
+  }
+}

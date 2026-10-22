@@ -2,87 +2,87 @@ import github from '../assets/github-light.svg';
 import styles from './StyleSheet.module.css';
 const assets = {
   "Python": {
-    "src": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/python.svg`,
     "href": "https://docs.python.org/3/"
   },
   "Java": {
-    "src": "https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/java.svg`,
     "href": "https://docs.oracle.com/en/java/"
   },
   "PyTorch": {
-    "src": "https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/pytorch.svg`,
     "href": "https://pytorch.org/docs/stable/"
   },
   "TensorFlow": {
-    "src": "https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/tensorflow.svg`,
     "href": "https://www.tensorflow.org/api_docs"
   },
   "Scikit-Learn": {
-    "src": "https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/scikit-learn.svg`,
     "href": "https://scikit-learn.org/stable/user_guide.html"
   },
   "Transformers": {
-    "src": "https://img.shields.io/badge/Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/transformers.svg`,
     "href": "https://huggingface.co/docs/transformers"
   },
   "Pandas": {
-    "src": "https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/pandas.svg`,
     "href": "https://pandas.pydata.org/docs/"
   },
   "NumPy": {
-    "src": "https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/numpy.svg`,
     "href": "https://numpy.org/doc/"
   },
   "OpenCV": {
-    "src": "https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/opencv.svg`,
     "href": "https://docs.opencv.org/master/"
   },
   "Matplotlib": {
-    "src": "https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/matplotlib.svg`,
     "href": "https://matplotlib.org/stable/users/index.html"
   },
   "Git": {
-    "src": "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/git.svg`,
     "href": "https://git-scm.com/doc"
   },
   "PHP": {
-    "src": "https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/php.svg`,
     "href": "https://www.php.net/docs.php"
   },
   "JavaScript": {
-    "src": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000000",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/javascript.svg`,
     "href": "https://developer.mozilla.org/docs/Web/JavaScript"
   },
   "HTML5": {
-    "src": "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/html5.svg`,
     "href": "https://developer.mozilla.org/docs/Web/HTML"
   },
   "CSS3": {
-    "src": "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/css3.svg`,
     "href": "https://developer.mozilla.org/docs/Web/CSS"
   },
   "MySQL": {
-    "src": "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/mysql.svg`,
     "href": "https://dev.mysql.com/doc/"
   },
   "NLTK": {
-    "src": "https://img.shields.io/badge/NLTK-154F6B?style=for-the-badge",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/nltk.svg`,
     "href": "https://www.nltk.org/"
   },
   "Datasets": {
-    "src": "https://img.shields.io/badge/Datasets-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/datasets.svg`,
     "href": "https://huggingface.co/docs/datasets"
   },
   "random": {
-    "src": "https://img.shields.io/badge/random-7C3AED?style=for-the-badge",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/random.svg`,
     "href": "https://docs.python.org/3/library/random.html"
   },
   "math": {
-    "src": "https://img.shields.io/badge/math-059669?style=for-the-badge",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/math.svg`,
     "href": "https://docs.python.org/3/library/math.html"
   },
   "time": {
-    "src": "https://img.shields.io/badge/time-2563EB?style=for-the-badge",
+    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/time.svg`,
     "href": "https://docs.python.org/3/library/time.html"
   }
 };

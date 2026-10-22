@@ -182,10 +182,10 @@ const projects = [
 export default function Projects() {
   return <section id="projects" className={styles.projectsSection} aria-labelledby="projects-heading">
     <div className="section-heading"><h2 id="projects-heading">Projects</h2></div>
-    {projects.map(project => <article key={project.id} className={styles.ProjectCard} aria-labelledby={`${project.id}-title`}>
-      <div className={styles.projectInner}>
+    {projects.map(project => <article key={project.id} data-project={project.id} className={styles.ProjectCard} aria-labelledby={`${project.id}-title`}>
+      <div className={`${styles.projectInner} project-layout`}>
         <ProjectVisual project={project.id} />
-        <div className={styles.leftContent}>
+        <div className={`${styles.leftContent} project-details`}>
           <h3 id={`${project.id}-title`}>{project.title}</h3>
           <p className="project-meta">{project.type} | {project.date}</p>
           <ul>{project.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul>

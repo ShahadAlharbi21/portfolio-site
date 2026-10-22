@@ -1,3 +1,23 @@
+# Final project visual refinements
+
+Checkpoint before these changes: a07707f.
+
+Skills retains deep forest teal #102D2A; Projects uses #193B40. All six project technology decks now stack categories vertically. Hero, navigation, personal content, certificates and centred Contact are retained.
+
+Only nine selected project images are included in public/projects. Source paths and hashes are in docs/project-assets.json. All supplied originals in CW3, NLI, Hex AI and ds remain unchanged outside public and are not copied into the production build. PDF inspection tools and review sheets are outside the project under the Codex temporary directory; no website dependency was added.
+
+CW3 review covered all 45 PNGs, the Python implementation, LaTeX report, both report PDFs and the coursework handout. The report and code select 64 disparities / block size 13 for dense reconstruction. The chosen dense disparity and point cloud are consistent with that configuration. The missing left input was recovered losslessly from the original embedded image in Figure 2(a) of the coursework PDF. The right input is the supplied standalone image. Other parameter experiments and selective-focus examples were omitted to keep the presentation focused.
+
+The actual NLI poster was read and visually inspected. It specifies binary entailment (1) and non-entailment (0); the portfolio uses the poster's illustrative cafe conversation example and its development-set Macro-F1 values 0.6379 and 0.9187. No model prediction is claimed.
+
+Hex image chronology was verified using visible turns and timestamps: opening, turn 8/9, later final board. The screenshots show a particular run and are not offered as evidence for the separate 94% / 100-game baseline result. CSS frames focus on the complete original boards without altering image files; every image opens its complete original screenshot.
+
+Distributed Booking uses both supplied screenshots unchanged, with only Client, Hotel service and Band service in the small architecture diagram. Movie Genre follows the user's supplied architecture and exact eight genre labels. The three models remain separate alternatives. No notebooks were read and no per-model scores or probabilities were invented.
+
+The 21 existing technology badge images are cached locally with identical branding, keeping their original documentation links. Source URLs are recorded in docs/technology-sources.json. No source PDFs, code, reports or notebooks are deployed.
+
+Earlier design notes follow for provenance and describe superseded visuals.
+
 # Current refinement
 
 The cinematic artwork, font imports, colour palette and wordmark are retained. The current page order is Hero, About, Skills, Projects, Certificates, Contact. Navigation uses section anchors; legacy section URLs are redirected to their anchors.
