@@ -1,23 +1,48 @@
-﻿import { NavLink, useLocation } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './StyleSheet.module.css';
-import { useTheme } from './ThemeContext';
+import sun from '../assets/sun.svg';
+import moon from '../assets/moon.svg';
+import { useTheme } from '../components/ThemeContext';
 
 function NavBar() {
   const { theme, toggleTheme } = useTheme();
-  const { pathname } = useLocation();
+  const themeIcon = theme === 'light' ? sun : moon;
+
   return (
-    <nav className={styles.NavBar} aria-label="Main navigation">
-      <NavLink to="/about" className={styles.brand}>
-        <strong>Shahad Alharbi</strong><span>Computer Science · Manchester</span>
-      </NavLink>
+    <div className={styles.NavBar}>
       <ul>
-        <li><NavLink to="/about" aria-current={pathname === '/' || pathname === '/about' ? 'page' : undefined}>Home</NavLink></li>
-        <li><NavLink to="/projects">Projects</NavLink></li>
-        <li><NavLink to="/certificates">Certificates</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-        <li><button type="button" className={styles.themeToggle} onClick={toggleTheme} aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}><span aria-hidden="true">{theme === 'light' ? '◐' : '◑'}</span></button></li>
+        <li>
+          <NavLink to="/about" end className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            <b>Home</b>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            <b>Projects</b>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/certificates" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            <b>Certificates</b>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            <b>Contact</b>
+          </NavLink>
+        </li>
+        <li id="icon">
+          <img
+            className={styles.colorMode}
+            src={themeIcon}
+            onClick={toggleTheme}
+            alt="toggle theme"
+          />
+        </li>
       </ul>
-    </nav>
+    </div>
   );
 }
+
 export default NavBar;

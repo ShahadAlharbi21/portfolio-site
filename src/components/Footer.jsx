@@ -1,4 +1,4 @@
-﻿
+import '../App.css';
 import react from 'react';
 import styles from'./StyleSheet.module.css';
 function Footer() {

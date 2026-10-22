@@ -1,91 +1,199 @@
-.NavBar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 20px 0; margin-bottom: 44px; background: var(--background-color); border-bottom: 1px solid var(--line); }
-.brand { display: flex; flex-direction: column; color: var(--text-color); text-decoration: none; line-height: 1.3; }
-.brand strong { font: 24px Georgia, serif; }
-.brand span { color: var(--muted); font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; margin-top: 5px; }
-.NavBar ul { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; list-style: none; margin: 0; padding: 5px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
-.NavBar li { display: flex; }
-.NavBar li a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 15px; border-radius: 8px; text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 600; }
-.NavBar li a:hover { background: var(--surface-soft); color: var(--text-color); }
-.NavBar li a[aria-current='page'] { background: var(--forest); color: #fff9ec; }
-.themeToggle { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 8px; background: var(--surface-soft); color: var(--text-color); font-size: 22px; }
-.container { position: relative; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); padding: clamp(24px, 5vw, 64px); margin-bottom: 36px; border-top: 5px solid var(--forest); }
-.info { max-width: 800px; }
-.info h1 { font-size: clamp(44px, 7vw, 82px); margin: 12px 0 22px; }
-.info b { font-weight: 400; }
-.info h2 { font: 500 clamp(20px, 2.5vw, 27px)/1.5 'Segoe UI', sans-serif; max-width: 650px; }
-.limitWidth { max-width: 66ch; }
-.limitWidth p { margin: 24px 0 30px; color: var(--muted); font-size: 17px; }
-.eyebrow { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
-.heroActions { display: flex; gap: 12px; flex-wrap: wrap; }
-.heroActions a { min-height: 46px; display: inline-flex; align-items: center; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; background: var(--forest); color: #fff9ec; }
-.heroActions a + a { background: var(--surface-soft); color: var(--text-color); }
-.projectsSection, .CertificatesSection, .ContactCardWrapper { padding-bottom: 48px; }
-.projectsSection > h1, .CertificatesSection > h1, .ContactCard h1 { margin: 10px 0 20px; }
-.sectionIntro { max-width: 65ch; color: var(--muted); margin-bottom: 28px; }
-.projectJump { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 18px 22px; margin: 0 0 28px; border: 1px solid var(--line); background: var(--surface-soft); border-radius: 10px; }
-.projectJump label { font-size: 14px; font-weight: 600; }
-.projectJump select { flex: 1 1 260px; min-width: 0; max-width: 100%; min-height: 46px; padding: 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--text-color); font-size: 14px; }
-.ProjectCard { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--forest); border-radius: 12px; margin-bottom: 24px; padding: clamp(20px, 3vw, 36px); scroll-margin-top: 145px; }
-.projectInner { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: start; gap: 32px; }
-.leftContent { min-width: 0; }
-.leftContent h2 { font-size: clamp(23px, 2.5vw, 30px); overflow-wrap: anywhere; }
-.leftContent p { color: var(--accent); font-size: 13px; font-weight: 500; margin: 12px 0 20px; }
-.leftContent ul { margin: 0; padding-left: 20px; }
-.leftContent li { color: var(--muted); font-size: 15px; line-height: 1.75; padding: 0 0 10px 4px; }
-.leftContent li:last-child { padding-bottom: 0; }
-.leftContent li::marker { color: var(--accent); }
-.leftContent strong { color: var(--text-color); }
-.rightTechCard { min-width: 0; background: var(--surface-soft); border-radius: 9px; padding: 20px; border: 1px solid var(--line); }
-.rightTechCard section { min-width: 0; }
-.rightTechCard h3 { font-size: 13px; margin-bottom: 12px; }
-.rightTechCard hr { border: 0; border-top: 1px solid var(--line); margin: 20px 0; }
-.badgeRow, .badges { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
-.badgeRow a, .badges a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; border-radius: 4px; }
-.badgeRow img, .badges img { display: block; height: 28px; width: auto; max-width: 100%; border-radius: 3px; object-fit: contain; }
-.badgeRow a:hover, .badges a:hover { outline: 2px solid var(--accent); outline-offset: 3px; }
-.skillsSection { margin-bottom: 48px; }
-.skillsCard { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: clamp(24px, 4vw, 44px); }
-.skillsCard h2 { font-size: 36px; margin-bottom: 28px; }
-.skillGroup { padding: 22px 0; border-top: 1px solid var(--line); }
-.skillGroup:first-child { border: 0; padding-top: 0; }
-.skillGroup h3 { margin-bottom: 6px; }
-.skillGroup p { color: var(--muted); margin-bottom: 16px; font-size: 15px; }
-.CourseCard, .CourseCard2, .CourseCard3 { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--forest); border-radius: 12px; padding: clamp(22px, 3vw, 36px); margin-bottom: 24px; }
-.CourseCard h2, .CourseCard2 h2, .CourseCard3 h2 { margin-bottom: 16px; }
-.CertificatesSection p, .CertificatesSection li { color: var(--muted); }
-.CertificatesSection li { margin-bottom: 10px; }
-.CertificatesSection ul { padding-left: 22px; }
-.CertificatesSection a { display: inline-flex; align-items: center; min-height: 44px; background: var(--forest); color: #fff9ec; padding: 10px 18px; border-radius: 7px; text-decoration: none; font-size: 14px; }
-.ContactCardSection { display: flex; flex-wrap: wrap; gap: 24px; padding: 32px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
-.ContactCardSection > span { flex: 1 1 180px; background: var(--surface-soft); border: 1px solid var(--line); padding: 24px; border-radius: 10px; text-align: center; }
-.ContactCardSection a { display: inline-flex; min-height: 88px; align-items: center; padding: 12px; background: var(--forest); border-radius: 12px; }
-.ContactCardSection img { width: 64px; height: 64px; object-fit: contain; }
-.ImgH h3 { margin-top: 12px; }
-.footer { border-top: 1px solid var(--line); color: var(--muted); margin-top: auto; padding: 28px 0; font-size: 13px; }
-.footer b { font-weight: 400; }
-@media (max-width: 900px) {
-  .NavBar { gap: 12px; margin-bottom: 28px; }
-  .brand strong { font-size: 21px; }
-  .NavBar li a { padding-inline: 12px; }
-  .projectInner { grid-template-columns: minmax(0, 1fr) 205px; gap: 22px; }
-  .rightTechCard { padding: 16px; }
-}
-@media (max-width: 680px) {
-  .NavBar { padding: 12px 0; gap: 12px; }
-  .brand { flex: 1 0 100%; }
-  .brand span { display: none; }
-  .NavBar ul { width: 100%; gap: 3px; padding: 3px; }
-  .NavBar li { flex: 1; }
-  .NavBar li:last-child { flex: 0 0 44px; }
-  .NavBar li a { width: 100%; padding-inline: 4px; font-size: 12px; }
-  .projectInner { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  .rightTechCard { width: 100%; }
-  .rightTechCard section { margin: 0; }
-  .ProjectCard { scroll-margin-top: 155px; }
-  .projectJump { padding: 16px; }
-  .projectJump label { flex-basis: 100%; }
-  .limitWidth p { font-size: 16px; }
-  .container { margin-bottom: 24px; }
-  .info h1 { letter-spacing: -1.5px; }
+:root { --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+:root{
+  --nav-active-bg: color-mix(in srgb, var(--card-bg, #0a192f) 85%, #000 15%);
+  --nav-active-bg-hover: color-mix(in srgb, var(--card-bg, #0a192f) 78%, #000 22%);
+  --nav-focus-ring: color-mix(in srgb, var(--card-bg, #0a192f) 50%, #000 10%);
 }
 
+html { -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
+
+.skillsSection { margin-top: 3rem; text-align: center; }
+
+.skillsCard h3{
+  color: white; text-align: left; padding: 0; padding-left: 4px; padding-bottom: 8px;
+  margin-left: 0.2rem; margin-right: 0.2rem;
+}
+
+.skillsCard h2 { text-align: center; font-size: 24px; color: white; padding-bottom: 24px; }
+
+.NavBar { padding: 32px 0 72px; box-sizing: border-box; width: 100%; display: flex; justify-content: center; }
+
+.limitWidth p{ padding-left: 32px; }
+
+.NavBar ul{
+  list-style: none; background-color: var(--card-bg, #0a192f); border-radius: 12px;
+  display: flex; justify-content: center; align-items: center; padding: 16px; flex-wrap: wrap; gap: 8px;
+  max-width: 560px; width: 88%; margin: 0 auto; text-align: center;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.NavBar a{
+  padding: 6px 14px; font-size: 15px; font-weight: 300; color: white; border-radius: 8px;
+  text-decoration: none; display: inline-block; text-align: center;
+  transition: background-color .2s ease, color .2s ease, transform .1s ease;
+}
+
+.NavBar a:hover{ background-color: rgba(255,255,255,.2); color: white; }
+
+.NavBar a.active,
+.NavBar a[aria-current="page"]{
+  background-color: var(--nav-active-bg); color: #fff; font-weight: 600; border: none; box-shadow: none;
+}
+
+.NavBar a.active:hover,
+.NavBar a[aria-current="page"]:hover{ background-color: var(--nav-active-bg-hover); box-shadow: none; }
+
+.NavBar a:active{ transform: translateY(1px); filter: brightness(.98); }
+
+.NavBar a:focus-visible{ outline: none; box-shadow: 0 0 0 3px var(--nav-focus-ring); }
+
+.NavBar li{ display: inline-block; padding: 0; margin: 0; font-size: 5px; }
+
+.skillsCard{
+  background-color: #0a192f; border-radius: 20px; color: white; width: 88%; max-width: 920px;
+  margin: 0 auto; box-sizing: border-box; padding: 48px 28px; padding-top: 32px;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.skillGroup{
+  margin-top: 1rem; text-align: left; max-width: 920px; margin-left: auto; margin-right: auto;
+  padding-left: 0.5rem; padding-right: 0.5rem;
+}
+
+.badges{
+  display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; padding: 5px 0 0 0;
+  justify-content: flex-start; margin-left: 0.2rem; margin-right: 0.2rem;
+}
+
+.badge{ color: white; padding: 0.35rem 0.7rem; border-radius: 8px; font-size: 0.8rem; display: inline-block; }
+
+.badgeImage{ border-radius: 6px; height: 26px; vertical-align: middle; }
+
+.ContactCardSection{
+  background-color: var(--card-bg, #0a192f); padding: 1.7rem; border-radius: 20px; color: white; width: 100%;
+  max-width: 380px; margin: 0 auto; display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap;
+  box-sizing: border-box; transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.ContactCard h1{ text-align: center; padding-bottom: 24px; }
+.ContactCardSection span{ display: flex; flex-direction: column; align-items: center; }
+
+.ImgH{ padding-top: 5px; text-align: center; }
+.ImgH h3{ color: white; margin: 0; }
+
+.footer{ color: #888; text-align: center; font-family: var(--font-sans); padding-top: 16px; padding-bottom: 16px; }
+
+.projectsSection{ padding-top: 72px; }
+
+.projectsSection h1{
+  margin: 0 0 16px; text-align: left;
+  padding-left: clamp(150px, 3.5vw, 40px);
+  font-size: 24px; line-height: 1.2;
+}
+
+.ProjectCard{
+  background-color: var(--card-bg, #0a192f); border-radius: 20px; padding: 1.5rem 1.8rem; color: white;
+  max-width: 860px; width: 88%; margin: 0 auto 24px; box-sizing: border-box;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+  overflow: hidden;
+}
+
+.projectInner{ display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+
+.leftContent{ flex: 1; width: 100%; padding: 0; margin: 0; box-sizing: border-box; }
+.leftContent li{ color: white; padding-bottom: 10px; font-family: var(--font-sans); }
+.leftContent h2{ margin-bottom: 0.6rem; font-size: 18px; }
+.leftContent p{ font-size: 15px; line-height: 1.65; color: #ccc; }
+
+.rightTechCard{
+  background-color:#0f2f5e; padding: 1rem; border-radius: 15px; width: 230px; font-size: 12px; flex-shrink: 0;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.rightTechCard hr{ border: none; border-top: 1px solid white; margin: 0.7rem 0; }
+.projectInner h2{ color: white; }
+
+.rightTechCard section{ display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 1.2rem; padding-left: 10px; }
+.rightTechCard section img{ margin-top: 6px; height: 26px; border-radius: 6px; display: inline-block; margin-right: 8px; }
+.rightTechCard h3{ font-size: 14px; color: white; margin: 0; padding: 0; }
+.rightTechCard img{ margin-top: 14px; height: 26px; border-radius: 6px; display: block; }
+
+.CourseCard,
+.CourseCard2,
+.CourseCard3{
+  background-color: var(--card-bg, #0a192f); border-radius: 20px; padding: 1.4rem 1.6rem; color: white;
+  max-width: 780px; width: 88%; margin: 0 auto 24px; box-sizing: border-box;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.CourseCard h2, .CourseCard2 h2, .CourseCard3 h2{ color: white; font-size: 18px; }
+
+.badgeRow{ display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+.skillsCard .badges{ margin-left: 0.2rem; margin-right: 0.2rem; }
+
+.info h1, .info h2{ padding-left: 32px; }
+.divider{ margin-bottom: 16px; margin-top: 24px; margin-left: 10px; }
+
+.skillGroup h3, .skillGroup p{ color:white; padding-left: 0; margin-left: 0; font-family: var(--font-sans); }
+.skillGroup p{ font-size: 14px; }
+
+.ContactCardWrapper{ padding-bottom: 72px; }
+
+.CourseCard li, .CourseCard h2, .CourseCard p,
+.CourseCard2 li, .CourseCard2 h2, .CourseCard2 p,
+.CourseCard3 li, .CourseCard3 h2, .CourseCard3 p{ font-family: var(--font-sans); }
+
+.CourseCard p, .CourseCard2 p, .CourseCard3 p{ padding-bottom: 18px; font-size: 15px; line-height: 1.6; }
+.CourseCard li, .CourseCard2 li, .CourseCard3 li{ padding-bottom: 22px; max-width: 40ch; }
+
+.CertificatesSection{ padding-top: 72px; }
+.CertificatesSection h1{ padding-left: 170px; padding-bottom: 18px; font-size: 24px; }
+.CertificatesSection p{ color:white; }
+
+.CourseCard{ min-height: auto; } .CourseCard2{ min-height: auto; } .CourseCard3{ min-height: auto; }
+
+.CourseCard a, .CourseCard2 a, .CourseCard3 a{
+  display: inline-block; padding: 8px 16px; background-color: #0077cc; color: white; text-decoration: none;
+  border-radius: 8px; font-weight: 600; transition: background-color 0.2s ease-in-out, color .2s ease; font-size: 14px; font-family: var(--font-sans);
+}
+.CourseCard a:hover, .CourseCard2 a:hover, .CourseCard3 a:hover{ background-color: #005fa3; }
+
+.buttonDesign{ padding-left: 28px; }
+
+img, video{ max-width: 100%; height: auto; display: block; }
+
+@media (max-width: 600px){
+  .skillsSection{ text-align: left; }
+  .skillsCard h3, .skillGroup p{ text-align: left; padding-left: 0; margin-left: 0; }
+  .projectsSection h1{ padding-left: clamp(12px, 4vw, 28px); font-size: 24px; }
+
+  .projectInner{ flex-direction: column; gap: 12px; }
+  .leftContent{ order: 1; }
+  .rightTechCard{
+    order: 2;
+    width: 70% !important;
+    max-width: 360px !important;
+    align-self: center;
+    margin: 4px auto 2px;
+    padding: 0.5rem 0.6rem;
+    border-radius: 10px;
+    font-size: 10.5px;
+  }
+  .rightTechCard h3{ font-size: 12.5px; margin: 0 0 6px; }
+  .rightTechCard section{ margin-bottom: 0.45rem; padding-left: 4px; }
+  .rightTechCard hr{ margin: 0.4rem 0; }
+  .rightTechCard img,
+  .rightTechCard section img{ height: 18px; }
+  .rightTechCard .badge{ font-size: 0.68rem; padding: 0.2rem 0.45rem; }
+
+  .ProjectCard{ padding: 1.25rem 1.4rem; max-width: 94%; width: 94%; overflow: hidden; }
+  .CourseCard, .CourseCard2, .CourseCard3{ padding: 1.25rem 1.4rem; max-width: 94%; width: 94%; }
+  .leftContent p{ font-size: 14px; line-height: 1.55; }
+
+  .CertificatesSection h1{ text-align: left; padding: 0 !important; margin: 0 0 12px 0; }
+}
+
+@media (min-width: 601px) and (max-width: 1024px){
+  .CertificatesSection h1{ text-align: left; padding: 0 !important; margin: 0 0 12px 0; }
+  .rightTechCard{ width: 200px; }
+}

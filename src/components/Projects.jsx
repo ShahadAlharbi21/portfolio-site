@@ -1,4 +1,4 @@
-﻿import styles from './StyleSheet.module.css';
+import styles from './StyleSheet.module.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
@@ -8,11 +8,10 @@ function Projects() {
       <NavBar />
 
       <section className={styles.projectsSection}>
-        <p className={styles.eyebrow}>Engineering / Selected work</p><h1>Projects</h1><p className={styles.sectionIntro}>Explorations in machine learning, computer vision, and software systems. From underlying algorithms to working implementations.</p>
+        <h1>Projects</h1>
 
-<div className={styles.projectJump}><label htmlFor="project-jump">Jump to a project</label><select id="project-jump" defaultValue="" onChange={(event) => { const target = document.getElementById(event.target.value); if (target) { target.scrollIntoView({ block: 'start' }); target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true }); } }}><option value="">Choose a project</option><option value="project-1">Stereo Vision and 3D Scene Reconstruction</option><option value="project-2">Harris Corner Detection and Feature Matching</option><option value="project-3">CNN Image Classification on CIFAR-100</option><option value="project-4">Image Filtering and Edge Detection</option><option value="project-5">Hex AI Agent</option><option value="project-6">Movie Genre Classification with Neural Models</option><option value="project-7">Distributional Semantics for Word Similarity</option><option value="project-8">X-Ray Prohibited Item Detection Platform</option><option value="project-10">Loan Classification and Soybean Yield Prediction</option><option value="project-11">Histogram & Horizon Detection with OpenCV</option><option value="project-13">BM25 for Retrieval-Augmented Question Answering</option><option value="project-14">Features for Estimating Autonomous Vehicle Poses</option><option value="project-15">Constraint Satisfaction</option><option value="project-16">Othello AI Using Minimax with Alpha-Beta Pruning</option><option value="project-17">Kilburnazon Employee Management System</option><option value="project-18">Kilburnazon Database Design</option><option value="project-19">Spam Filter with Naïve Bayes</option></select></div>
         {/* CW3 */}
-        <div id="project-1" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Stereo Vision and 3D Scene Reconstruction</h2>
@@ -56,7 +55,7 @@ function Projects() {
         </div>
 
         {/* CW2 */}
-        <div id="project-2" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Harris Corner Detection and Feature Matching</h2>
@@ -102,7 +101,7 @@ function Projects() {
           </div>
         </div>
 
-          <div id="project-3" className={styles.ProjectCard}>
+          <div className={styles.ProjectCard}>
             <div className={styles.projectInner}>
               <div className={styles.leftContent}>
                 <h2>CNN Image Classification on CIFAR-100</h2>
@@ -154,7 +153,7 @@ function Projects() {
 
 
         {/* CW1 */}
-        <div id="project-4" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Image Filtering and Edge Detection</h2>
@@ -205,7 +204,7 @@ function Projects() {
           </div>
         </div>
 
-          <div id="project-5" className={styles.ProjectCard}>
+          <div className={styles.ProjectCard}>
             <div className={styles.projectInner}>
               <div className={styles.leftContent}>
                 <h2>Hex AI Agent</h2>
@@ -252,7 +251,7 @@ function Projects() {
           </div>
 
 
-        <div id="project-6" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Movie Genre Classification with Neural Models</h2>
@@ -315,7 +314,7 @@ function Projects() {
           </div>
         </div>
         
-        <div id="project-7" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Distributional Semantics for Word Similarity</h2>
@@ -371,7 +370,7 @@ function Projects() {
         </div>
 
 
-        <div id="project-8" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>X-Ray Prohibited Item Detection Platform</h2>
@@ -464,7 +463,7 @@ function Projects() {
           </div>
         </div>
     {/*
-        <div id="project-9" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>A Distributed Booking System for Coordinating Hotel and Band Reservations</h2>
@@ -504,7 +503,7 @@ function Projects() {
         </div>
 
         */}
-        <div id="project-10" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Loan Classification and Soybean Yield Prediction</h2>
@@ -549,7 +548,7 @@ function Projects() {
           </div>
         </div>
 
-        <div id="project-11" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Histogram & Horizon Detection with OpenCV</h2>
@@ -585,7 +584,7 @@ function Projects() {
           </div>
         </div>
 {/*
-        <div id="project-12" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>A Robust Socket-Based Messaging System for Healthcare Professionals</h2>
@@ -624,7 +623,7 @@ function Projects() {
           </div>
         </div>
 */}
-        <div id="project-13" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>BM25 for Retrieval-Augmented Question Answering</h2>
@@ -663,7 +662,7 @@ function Projects() {
           </div>
         </div>
 
-        <div id="project-14" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Features for Estimating Autonomous Vehicle Poses</h2>
@@ -698,7 +697,7 @@ function Projects() {
             </div>
           </div>
         </div>
-        <div id="project-15" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Constraint Satisfaction</h2>
@@ -734,7 +733,7 @@ function Projects() {
           </div>
         </div>
 
-        <div id="project-16" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Othello AI Using Minimax with Alpha-Beta Pruning</h2>
@@ -761,7 +760,7 @@ function Projects() {
           </div>
         </div>
 
-        <div id="project-17" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Kilburnazon Employee Management System</h2>
@@ -806,7 +805,7 @@ function Projects() {
           </div>
         </div>
 
-        <div id="project-18" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Kilburnazon Database Design</h2>
@@ -833,7 +832,7 @@ function Projects() {
           </div>
         </div>
 
-        <div id="project-19" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
             <div className={styles.projectInner}>
                 <div className={styles.leftContent}>
                 <h2>Spam Filter with Naïve Bayes</h2>
@@ -883,7 +882,7 @@ function Projects() {
 
 
 {/*
-        <div id="project-20" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Magic Bakery</h2>
@@ -911,7 +910,7 @@ function Projects() {
         </div>
 */}
 {/*
-        <div id="project-21" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Caching Simulation</h2>
@@ -939,7 +938,7 @@ function Projects() {
         </div>
 */}
 {/*
-        <div id="project-22" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>MU0 Processor Implementation</h2>
@@ -966,7 +965,7 @@ function Projects() {
           </div>
         </div>
 
-        <div id="project-23" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Toucan Crossing Controller (Verilog FSM Design)</h2>
@@ -993,7 +992,7 @@ function Projects() {
           </div>
         </div>
 
-        <div id="project-24" className={styles.ProjectCard}>
+        <div className={styles.ProjectCard}>
           <div className={styles.projectInner}>
             <div className={styles.leftContent}>
               <h2>Pong Game</h2>
@@ -1040,7 +1039,3 @@ function Projects() {
 }
 
 export default Projects;
-
-
-
-
