@@ -61,6 +61,7 @@ export default function KilburnazonSchema({ dialogRef }) {
   const viewport = useRef(null), gesture = useRef(null);
   const [view,setView] = useState(() => readableView(employeesTable));
   const [expanded,setExpanded] = useState(false);
+  const [viewportSize, setViewportSize] = useState({ width: 1, height: 1 });
   function reset() {
     setView(readableView(employeesTable, viewport.current?.clientWidth));
   }
@@ -91,10 +92,16 @@ export default function KilburnazonSchema({ dialogRef }) {
     document.addEventListener('fullscreenchange', fullscreenChange);
     function toggle() {
       if (dialog.open) { previousOverflow=document.body.style.overflow; document.body.style.overflow='hidden'; setView(readableView(employeesTable, area.clientWidth)); }
-      else { document.body.style.overflow=previousOverflow ?? ''; gesture.current=null; }
+      else { document.body.style.overflow=previousOverflow ?? ''; gesture.current=null; setExpanded(false); }
     }
-    dialog.addEventListener('toggle',toggle);
-    return () => { document.removeEventListener('fullscreenchange',fullscreenChange); dialog.removeEventListener('toggle',toggle); if (previousOverflow!==undefined) document.body.style.overflow=previousOverflow; };
+    const opening = new MutationObserver(toggle);
+    opening.observe(dialog, { attributes: true, attributeFilter: ['open'] });
+    const resize = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect;
+      if (width > 0 && height > 0) setViewportSize({ width, height });
+    });
+    resize.observe(area);
+    return () => { document.removeEventListener('fullscreenchange',fullscreenChange); opening.disconnect(); resize.disconnect(); if (previousOverflow!==undefined) document.body.style.overflow=previousOverflow; };
   },[dialogRef]);
   function zoom(factor,point) {
     const box=viewport.current.getBoundingClientRect();
@@ -128,7 +135,7 @@ export default function KilburnazonSchema({ dialogRef }) {
   function focusTable(name) {
     const table=schemaTables.find(item=>item.name===name),box=viewport.current.getBoundingClientRect();
     if (!table) return;
-    setView(readableView(table, box.width));
+    setView({ scale: readableScale, x: (box.width - table.width * readableScale) / 2 - table.x * readableScale, y: Math.max(24, (box.height - tableHeight(table) * readableScale) / 2) - table.y * readableScale });
   }
   return <dialog ref={dialogRef} id="kilburnazon-schema" className={styles.schemaDialog+' '+(expanded?styles.expanded:'')} aria-labelledby="kilburnazon-schema-heading">
     <div className={styles.schemaShell} data-schema-shell="true">
@@ -141,7 +148,7 @@ export default function KilburnazonSchema({ dialogRef }) {
         <output aria-label="Zoom level">{Math.round(view.scale*100)}%</output>
       </div>
       <div ref={viewport} className={styles.schemaViewport} role="region" aria-label="Interactive database diagram" tabIndex="0" onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={()=>{gesture.current=null;}} onPointerCancel={()=>{gesture.current=null;}} onKeyDown={keyDown} onDoubleClick={event=>{const box=viewport.current.getBoundingClientRect();zoom(1.5,{x:event.clientX-box.left,y:event.clientY-box.top});}}>
-        <svg className={styles.diagram} aria-label="Kilburnazon entity relationship diagram with all 32 tables" width="100%" height="100%"><g transform={'translate('+view.x+' '+view.y+') scale('+view.scale+')'}><SchemaDrawing /></g></svg>
+        <svg viewBox={`0 0 ${viewportSize.width} ${viewportSize.height}`} preserveAspectRatio="none" className={styles.diagram} aria-label="Kilburnazon entity relationship diagram with all 32 tables" width="100%" height="100%"><g transform={'translate('+view.x+' '+view.y+') scale('+view.scale+')'}><SchemaDrawing /></g></svg>
       </div>
     </div>
   </dialog>;

@@ -7,7 +7,7 @@ export default function Education() {
       <span className="credential-dates">2023–2026</span>
       <div className="credential-body">
         <a className="credential-mark manchester-mark" href="https://www.manchester.ac.uk/" target="_blank" rel="noopener noreferrer" aria-label="The University of Manchester official website"><img src={institutionAsset('manchester')} alt="The University of Manchester logo" width="190" height="77" loading="lazy" /></a>
-        <div className="credential-copy"><h3>University of Manchester</h3><p>BSc (Hons) Computer Science<br />First-Class Honours</p></div>
+        <div className="credential-copy"><h3>University of Manchester</h3><p>BSc (Hons) Computer Science<br /><strong className="honours-emphasis">First-Class Honours</strong></p></div>
       </div>
     </div>
     <div className="credential-row">

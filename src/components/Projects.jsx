@@ -178,13 +178,14 @@ const projects = [
 export default function Projects() {
   return <section id="projects" className={styles.projectsSection} aria-labelledby="projects-heading">
     <div className="section-heading"><h2 id="projects-heading">Projects</h2></div>
-    {projects.map(project => <article key={project.id} data-project={project.id} className={styles.ProjectCard} aria-labelledby={`${project.id}-title`}>
+    <nav className="project-index" aria-label="Jump to project">{projects.map(project => <a key={project.id} href={`#project-${project.id}`}>{project.title}</a>)}</nav>
+    {projects.map(project => <article id={`project-${project.id}`} key={project.id} data-project={project.id} className={styles.ProjectCard} aria-labelledby={`${project.id}-title`}>
       <div className={`${styles.projectInner} project-layout`}>
         <ProjectVisual project={project.id} />
         <div className={`${styles.leftContent} project-details`}>
           <h3 id={`${project.id}-title`}>{project.title}</h3>
           <p className="project-meta">{project.type} | {project.date}</p>
-          <ul>{project.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul>
+          <ul>{project.bullets.map(bullet => <li key={bullet}>{bullet.split(/(0\.9187 Macro-F1|94% win rate)/).map((part, index) => /^(0\.9187 Macro-F1|94% win rate)$/.test(part) ? <strong className="project-achievement" key={index}>{part}</strong> : part)}</li>)}</ul>
           <div className={styles.rightTechCard}>{project.groups.map(([heading, names]) => <div key={heading}><h4>{heading}</h4><TechBadges names={names} /></div>)}</div>
         </div>
       </div>

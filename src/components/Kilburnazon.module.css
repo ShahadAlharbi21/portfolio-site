@@ -23,9 +23,9 @@
 .schemaDialog .toolbar h3{font-family:inherit;font-size:18px;font-weight:500;margin:0;color:#f5f0e6;line-height:1.4}
 .schemaControls{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:0 18px 8px}
 .schemaControls output{font-size:12px;font-variant-numeric:tabular-nums}
-.schemaViewport{flex:1;min-height:200px;overflow:hidden;background:#fff;touch-action:none;cursor:grab;border-block:1px solid #789daf66}
+.schemaViewport{position:relative;flex:1;min-height:200px;overflow:hidden;background:#fff;touch-action:none;cursor:grab;border-block:1px solid #789daf66}
 .schemaViewport:active{cursor:grabbing}
-.schemaDialog .diagram{display:block;width:100%;height:100%;margin:0;padding:0;user-select:none}
+.schemaDialog .diagram{position:absolute;inset:0;display:block;width:100%;height:100%;margin:0;padding:0;user-select:none}
 .relationship{stroke:#000;stroke-width:1.4;fill:none}
 .endpoint{stroke:#000;stroke-width:1.4;fill:#fff}
 .relationshipLabel rect{fill:#fff;stroke:none}
@@ -41,7 +41,15 @@
 
 .tablePicker{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px}.tablePicker select{font:inherit;max-width:240px;min-height:44px;background:#173a38;color:#f5f0e6;border:1px solid #789daf;padding:8px}.tablePicker select:focus-visible{outline:2px solid #efb875;outline-offset:2px}
 
-.hexGallery .imageLink{height:clamp(430px,44vw,620px);background:#0b0c0c}.schemaShell:fullscreen{width:100vw;height:100dvh;background:#102d2b;color:#f5f0e6}.schemaShell:fullscreen .schemaViewport{min-height:0}@media(max-width:600px){.hexGallery .imageLink{height:460px}}
+.hexGallery .imageLink,.terminalGallery .imageLink{height:auto;min-height:0;aspect-ratio:var(--gallery-image-ratio);padding:0;background:#0b0c0c}
+.viewerNavigation{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px}
+.imageDialog .toolbar{position:sticky;top:0;z-index:1;background:#102d2b;gap:10px;padding:10px 14px}
+.imageDialog{max-height:96dvh;overflow:hidden;display:none;flex-direction:column}
+.imageDialog[open]{display:flex}
+.originalViewport{min-height:0;flex:1;overscroll-behavior:contain}
+.originalViewport:focus-visible{outline:2px solid #efb875;outline-offset:-3px}
+.schemaShell:fullscreen{width:100vw;height:100dvh;background:#102d2b;color:#f5f0e6}.schemaShell:fullscreen .schemaViewport{min-height:0}
+@media(max-width:600px){.imageDialog .toolbar{padding:8px;gap:8px}.viewerNavigation{width:100%;justify-content:space-between}.schemaControls{max-height:36dvh;overflow-y:auto;flex-shrink:0}.tablePicker select{max-width:min(240px,75vw)}}
 
 .primaryKey{font-weight:700;text-decoration:underline}
 

@@ -20,7 +20,6 @@ function ProjectImage({ file, alt, label }) {
 
 function NliVisual() {
   return <div className="semantic-nli">
-    <p className="visual-note nli-example-note">Illustrative example, not a model prediction</p>
     <div className="nli-sentences">
       <div className="nli-sentence"><h4>Premise</h4><p>Two people are sitting in a café <span>talking</span>.</p></div>
       <div className="nli-sentence"><h4>Hypothesis</h4><p>Two people are <span>having a conversation</span>.</p></div>
@@ -99,8 +98,10 @@ function BookingVisual() {
       <g fontSize="15"><text x="48" y="146" fill="#ed8d83">Request</text><text x="153" y="174" fontSize="14" fill="#9fbfd1">Response</text><text x="330" y="146" fill="#ed8d83">Request</text><text x="287" y="174" fontSize="14" textAnchor="end" fill="#9fbfd1">Response</text></g>
     </svg>
     <div className="booking-support">
-      <ProjectImage file="booking/main-menu.png" alt="Genuine Wedding Planner main menu, with booking and availability actions." />
-      <ProjectImage file="booking/hotel-booking.png" alt="Genuine Wedding Planner hotel reservation prompt." />
+      <ProjectGallery label="Distributed Booking System screenshots" className={galleryStyles.terminalGallery} images={[
+        { file: 'booking/main-menu.png', caption: 'Main menu', alt: 'Genuine Wedding Planner main menu, with booking and availability actions.' },
+        { file: 'booking/hotel-booking.png', caption: 'Hotel booking', alt: 'Genuine Wedding Planner hotel reservation prompt.' },
+      ].map(image => ({ ...image, width: projectImages[image.file][0], height: projectImages[image.file][1] }))} />
     </div>
   </>;
 }
