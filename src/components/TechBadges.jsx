@@ -1,6 +1,7 @@
 import github from '../assets/github-light.svg';
 import styles from './StyleSheet.module.css';
 const assets = {
+  "Bash": { "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/bash.svg`, "href": "https://www.gnu.org/software/bash/manual/bash.html" },
   "Python": {
     "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/python.svg`,
     "href": "https://docs.python.org/3/"
@@ -72,23 +73,11 @@ const assets = {
   "Datasets": {
     "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/datasets.svg`,
     "href": "https://huggingface.co/docs/datasets"
-  },
-  "random": {
-    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/random.svg`,
-    "href": "https://docs.python.org/3/library/random.html"
-  },
-  "math": {
-    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/math.svg`,
-    "href": "https://docs.python.org/3/library/math.html"
-  },
-  "time": {
-    "src": `${import.meta.env.BASE_URL.replace(/\/$/, '')}/technology/time.svg`,
-    "href": "https://docs.python.org/3/library/time.html"
   }
 };
 export default function TechBadges({ names }) {
   return <div className={styles.badgeRow}>{names.map(name => {
-    const asset = assets[name];
+    const asset = assets[{ HTML: 'HTML5', CSS: 'CSS3', 'Scikit-learn': 'Scikit-Learn' }[name] || name];
     if (asset) return <a key={name} href={asset.href} target="_blank" rel="noopener noreferrer"><img src={asset.src} alt={name === 'Scikit-Learn' ? 'Scikit-learn' : name} loading="lazy" /></a>;
     if (name === 'GitHub') return <a key={name} className="text-technology" href="https://github.com" target="_blank" rel="noopener noreferrer"><img src={github} alt="" />GitHub</a>;
     return <span key={name} className="text-technology">{name}</span>;

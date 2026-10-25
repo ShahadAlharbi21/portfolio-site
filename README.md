@@ -1,20 +1,24 @@
-# Personal Portfolio
+﻿# Personal Portfolio
+
 A portfolio website built with **React** and **Vite**.
 
 ## Project Setup
-After cloning the repository and navigating into the folder, run:
+
+After cloning the repository and navigating into the project folder, run:
 
 ### Install all project dependencies
-```bash
+```
 npm install
 ```
-### Start local dev server with hot reload
-```bash
+
+### Start the local development server with hot reload
+```
 npm run dev
 ```
-Then open http://localhost:5173/portfolio-site/#/about in your browser to view the app.
 
-### Create a production-ready version of the site
-```bash
+Then open [http://localhost:5173/portfolio-site/#/about](http://localhost:5173/portfolio-site/#/about) in your browser to view the website.
+
+### Create a production-ready build
+```
 npm run build
 ```

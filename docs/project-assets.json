@@ -1,38 +1,72 @@
 {
   "stereo/left.png": {
-    "source": "CW3/comp37212_coursework3.pdf, Figure 2(a), original embedded image",
-    "sha256": "56d177b04ba41a0a7ea727431403ecf565a6c72419071a35ead122122984deaf"
+    "source": "public/projects/stereo/left.png",
+    "sha256": "56d177b04ba41a0a7ea727431403ecf565a6c72419071a35ead122122984deaf",
+    "originalSource": "CW3/comp37212_coursework3.pdf, Figure 2(a), original embedded image"
   },
   "stereo/right.png": {
-    "source": "CW3/umbrella-right.png",
-    "sha256": "fa4dba6122e1c27f95c7ce748c34ed99289a86d7fedfaed0d9f0fb5179bc2048"
+    "source": "public/projects/stereo/right.png",
+    "sha256": "fa4dba6122e1c27f95c7ce748c34ed99289a86d7fedfaed0d9f0fb5179bc2048",
+    "originalSource": "CW3/umbrella-right.png"
   },
   "stereo/disparity.png": {
-    "source": "CW3/umbrella/nocanny/n64/disparity_noCanny_numDisparities_64_blockSize_13.png",
-    "sha256": "c470acb56fb80adbd4850af06e032202f48fd7fc8c93493d42b23cf07c2ae364"
+    "source": "public/projects/stereo/disparity.png",
+    "sha256": "c470acb56fb80adbd4850af06e032202f48fd7fc8c93493d42b23cf07c2ae364",
+    "originalSource": "CW3/umbrella/nocanny/n64/disparity_noCanny_numDisparities_64_blockSize_13.png"
   },
   "stereo/reconstruction.png": {
-    "source": "CW3/umbrella_3d_view_noCanny.png",
-    "sha256": "0c333115704ed88908fb280190e460e6bc1bc0265f438afa6e882ff2c10dd788"
+    "source": "public/projects/stereo/reconstruction.png",
+    "sha256": "0c333115704ed88908fb280190e460e6bc1bc0265f438afa6e882ff2c10dd788",
+    "originalSource": "CW3/umbrella_3d_view_noCanny.png"
   },
   "hex/start.png": {
-    "source": "Hex AI/Hex_Game_Start.png",
-    "sha256": "01de42113b4007e6512b3cab888472af871d1ed1aa335725d7764a5f482960bd"
+    "source": "public/projects/hex/start.png",
+    "sha256": "01de42113b4007e6512b3cab888472af871d1ed1aa335725d7764a5f482960bd",
+    "originalFilename": "Hex_Game_Start.png"
   },
   "hex/midgame.png": {
-    "source": "Hex AI/Hex_Game_1.png",
-    "sha256": "1f5c43fb9902986a73726f459079e9f34128f67ea65296862fc1e2603eec0631"
+    "source": "public/projects/hex/midgame.png",
+    "sha256": "1f5c43fb9902986a73726f459079e9f34128f67ea65296862fc1e2603eec0631",
+    "originalFilename": "Hex_Game_1.png"
   },
   "hex/later-game.png": {
-    "source": "Hex AI/Hex_Game_2.png",
-    "sha256": "eb49b06f1908000318a7718296b9baca4a96b7ab0f495d5277c8c9c1a0d4e26a"
+    "source": "public/projects/hex/later-game.png",
+    "sha256": "eb49b06f1908000318a7718296b9baca4a96b7ab0f495d5277c8c9c1a0d4e26a",
+    "originalFilename": "Hex_Game_2.png"
   },
   "booking/main-menu.png": {
-    "source": "ds/Wedding_Planner_Main_Menu.png",
-    "sha256": "37fcfdb89f5613435810917f77cef71e413906a505211368c089710470e96444"
+    "source": "public/projects/booking/main-menu.png",
+    "sha256": "37fcfdb89f5613435810917f77cef71e413906a505211368c089710470e96444",
+    "originalFilename": "Wedding_Planner_Main_Menu.png"
   },
   "booking/hotel-booking.png": {
-    "source": "ds/Wedding_Planner_Hotel_Booking_Prompt.png",
-    "sha256": "cbd0801eb4ab199c183d3d45005c000fa021219dd387ae351f7383e6f953ccd4"
+    "source": "public/projects/booking/hotel-booking.png",
+    "sha256": "cbd0801eb4ab199c183d3d45005c000fa021219dd387ae351f7383e6f953ccd4",
+    "originalFilename": "Wedding_Planner_Hotel_Booking_Prompt.png"
+  },
+  "kilburnazon/kilburnazon-main-menu.png": {
+    "source": "public/projects/kilburnazon/kilburnazon-main-menu.png",
+    "sha256": "04754386e897596405a9d4d55e804f0b66fd8689fe61dd52c9a35883639f6a13",
+    "originalFilename": "kilburnazon-main-menu.png"
+  },
+  "kilburnazon/kilburnazon-employee-search.png": {
+    "source": "public/projects/kilburnazon/kilburnazon-employee-search.png",
+    "sha256": "c46ceaef23046304ecac3f6bf784e0de3c8b612eca344f80428824de3669eb26",
+    "originalFilename": "kilburnazon-employee-search.png"
+  },
+  "kilburnazon/kilburnazon-leave-request.png": {
+    "source": "public/projects/kilburnazon/kilburnazon-leave-request.png",
+    "sha256": "194cfb388a9ded030443e091f126fd4ca56075eacdaf85c45c4f0f7e4580ecaa",
+    "originalFilename": "kilburnazon-leave-request.png"
+  },
+  "kilburnazon/kilburnazon-payroll-report.png": {
+    "source": "public/projects/kilburnazon/kilburnazon-payroll-report.png",
+    "sha256": "ebb4564024e2d16f98d676f6043cf009ae76e6fd64c18064ea9b1765a50e4f48",
+    "originalFilename": "kilburnazon-payroll-report.png"
+  },
+  "kilburnazon/kilburnazon-birthday-report.png": {
+    "source": "public/projects/kilburnazon/kilburnazon-birthday-report.png",
+    "sha256": "f4ac34a13610a4c0fe5510c60b9f3891f1d81558681d363333ab84531308488b",
+    "originalFilename": "kilburnazon-birthday-report.png"
   }
 }

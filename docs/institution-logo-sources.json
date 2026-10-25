@@ -1,0 +1,12 @@
+{
+  "manchester": {
+    "source": "https://documents.manchester.ac.uk/display.aspx?DocID=30476",
+    "method": "Logo vector paths exported from the official PDF cover. Full Manchester 1824 tab and university nametype retained; no recolouring.",
+    "guidelines": "https://www.staffnet.manchester.ac.uk/brand/visual-identity/logo/"
+  },
+  "neom": {
+    "source": "https://www.neom.com/etc.clientlibs/neom/clientlibs/clientlib-site/resources/asset/src_app_svg_icon_neom-logo_svg_inline.5669195.js",
+    "method": "Original inline SVG extracted unchanged from the official public website asset.",
+    "website": "https://www.neom.com/en-us"
+  }
+}

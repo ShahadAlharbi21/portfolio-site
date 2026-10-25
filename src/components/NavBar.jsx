@@ -17,8 +17,8 @@ export default function NavBar() {
     return () => observer.disconnect();
   }, []);
   return <header className="masthead">
-    <a className="wordmark" href="#home" aria-label="Shahad Alharbi home">s<span>.</span>a</a>
-    <nav aria-label="Main navigation">{sections.map(section => <a key={section} href={`#${section}`} className={active === section ? 'active' : undefined} aria-current={active === section ? 'location' : undefined}>{labels[section]}</a>)}</nav>
+    <a className="wordmark" href="#/home" aria-label="Shahad Alharbi home">s<span>.</span>a</a>
+    <nav aria-label="Main navigation">{sections.map(section => <a key={section} href={section === 'about' ? '#about' : `#/${section}`} className={active === section ? 'active' : undefined} aria-current={active === section ? 'location' : undefined}>{labels[section]}</a>)}</nav>
     <button className="theme-switch" onClick={toggleTheme} aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}>{theme === 'light' ? '◐' : '◑'}</button>
   </header>;
 }

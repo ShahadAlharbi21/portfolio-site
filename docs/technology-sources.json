@@ -17,7 +17,5 @@
   "MySQL": "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white",
   "NLTK": "https://img.shields.io/badge/NLTK-154F6B?style=for-the-badge",
   "Datasets": "https://img.shields.io/badge/Datasets-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black",
-  "random": "https://img.shields.io/badge/random-7C3AED?style=for-the-badge",
-  "math": "https://img.shields.io/badge/math-059669?style=for-the-badge",
-  "time": "https://img.shields.io/badge/time-2563EB?style=for-the-badge"
+  "Bash": "https://img.shields.io/badge/Bash-000000?style=for-the-badge&logo=gnubash&logoColor=white"
 }

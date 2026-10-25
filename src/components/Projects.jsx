@@ -9,10 +9,10 @@ const projects = [
     "type": "Team Project",
     "date": "Apr 2026",
     "bullets": [
-      "Collaborated in a team to model approximately 30,000 premise\u2013hypothesis pairs for natural language inference.",
-      "Contributed to an SVM using TF-IDF and handcrafted linguistic features, achieving 0.6379 Macro-F1.",
-      "Fine-tuned DeBERTa-v3-large with hyperparameter tuning, achieving 0.9187 Macro-F1.",
-      "Evaluated models using Macro-F1 and explored mean pooling and layer-wise learning rate decay (LLRD)."
+      "Collaborated on processing and analysing 30,000 premise–hypothesis pairs for natural language inference.",
+      "Built an SVM with TF-IDF and linguistic features, achieving 0.6379 Macro-F1, 5% above baseline.",
+      "Fine-tuned DeBERTa-v3-large with hyperparameter tuning and early stopping, achieving 0.9187 Macro-F1.",
+      "Explored mean pooling and layer-wise learning rate decay (LLRD) during transformer fine-tuning."
     ],
     "groups": [
       [
@@ -26,10 +26,7 @@ const projects = [
         [
           "PyTorch",
           "Transformers",
-          "Scikit-Learn",
-          "Pandas",
-          "NumPy",
-          "NLTK"
+          "Scikit-learn"
         ]
       ]
     ]
@@ -68,9 +65,9 @@ const projects = [
     "type": "Solo Project",
     "date": "Dec 2025",
     "bullets": [
-      "Developed multi-label text classification across eight movie genres using movie titles and plot synopses.",
+      "Developed multi-label text classification across 8 movie genres using movie titles and plot synopses.",
       "Built a bidirectional LSTM and fine-tuned RoBERTa-base and DeBERTa-v3-large transformer models.",
-      "Applied class-weighted binary cross-entropy loss and optimised class-specific decision thresholds.",
+      "Applied class-weighted binary cross-entropy loss and optimized class-specific decision thresholds.",
       "Evaluated models using weighted F1, achieving a best score of 0.5979 on unseen data."
     ],
     "groups": [
@@ -86,7 +83,7 @@ const projects = [
           "PyTorch",
           "Transformers",
           "Datasets",
-          "Scikit-Learn",
+          "Scikit-learn",
           "Pandas",
           "NumPy",
           "NLTK"
@@ -100,16 +97,23 @@ const projects = [
     "type": "Team Project",
     "date": "Dec 2025",
     "bullets": [
-      "Collaborated in a team to develop a Hex AI agent using Monte Carlo Tree Search (MCTS).",
-      "Enhanced search efficiency using RAVE statistics, Zobrist hashing, and heuristic-guided search.",
-      "Used Union-Find for efficient connectivity checking and winner detection.",
-      "Achieved a 94% win rate across 100 games against the baseline."
+      "Contributed to developing a competitive Hex agent using Monte Carlo Tree Search (MCTS).",
+      "Implemented Zobrist hashing and transposition tables to optimise search and reuse game states.",
+      "Integrated team-developed RAVE, Union-Find win detection, move ordering, and endgame heuristics.",
+      "Achieved a 94% win rate against the baseline in 100 games; automated matches and log parsing with Bash."
     ],
     "groups": [
       [
         "Programming Languages",
         [
-          "Python"
+          "Python",
+          "Bash"
+        ]
+      ],
+      [
+        "Tools & Technologies",
+        [
+          "Git"
         ]
       ]
     ]
@@ -131,8 +135,8 @@ const projects = [
         [
           "PHP",
           "JavaScript",
-          "HTML5",
-          "CSS3"
+          "HTML",
+          "CSS"
         ]
       ],
       [
@@ -147,12 +151,12 @@ const projects = [
     "id": "booking",
     "title": "Distributed Booking System",
     "type": "Solo Project",
-    "date": "Apr\u2013May 2025",
+    "date": "Apr 2025– May 2025",
     "bullets": [
-      "Developed a distributed booking application using REST APIs for real-time availability and reservations.",
-      "Implemented reservation, cancellation, and earliest-slot matching across distributed service endpoints.",
-      "Added input validation, retry handling, and rate limiting to improve reliability across API interactions.",
-      "Handled service failures and invalid responses to maintain consistent application behaviour."
+      "Developed a Python booking application integrating hotel and band services through REST APIs.",
+      "Implemented reservations, cancellations, and automated earliest-slot matching across both services.",
+      "Added input validation, server-error retries, and request throttling to improve API reliability.",
+      "Handled HTTP errors and failed bookings, automatically cancelling incomplete or unmatched reservations."
     ],
     "groups": [
       [

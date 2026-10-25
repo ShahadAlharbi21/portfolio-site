@@ -1,3 +1,21 @@
+# Current asset organisation
+
+The original Hex, Kilburnazon and Booking screenshots now have one canonical copy each in public/projects. Their bytes are unchanged; original filenames and hashes are recorded in docs/project-assets.json. References to the former Hex AI, kilburnazon and ds source directories below describe historical layouts. CW3 retains the newer complete report and original Python implementation. Unused image exports, LaTeX source, the older report and assignment handout were removed. Selected stereo images have one canonical copy in public/projects/stereo. The records below describe historical layouts.
+
+# Final semantic, logo and wording refinements
+
+Checkpoint: 4e2900e. Existing six-project layout, hero, About, skills and typography retained.
+
+NLI now uses paired semantic highlights and layout-aware connectors for participants and activity. This is labelled as illustrative semantic alignment, not measured attention. The illustrative three-way NLI labels are separate from the actual project binary-task Macro-F1 scores. The cafe accent is UTF-8. Movie Genre retains its three alternative architectures and now uses the user's exact updated bullets (8 genres, optimized thresholds). Matching Stereo and Kilburnazon descriptions remain exact. Hex now lists Python and Bash while keeping its original description and uncropped screenshots.
+
+Booking arrows are four SVG line elements, two requests and two responses, with no bidirectional arrowheads or curved connection paths. Icons remain unchanged.
+
+Education uses authentic institutional vectors: Manchester's complete logo exported from its official PDF, and NEOM's original monochrome symbol from its official website SVG bundle. Their original paths and colours are retained and supported on a shared ivory field. Manchester guidelines prohibit arbitrary recolouring, so no palette recreation was substituted. Sources are recorded in docs/institution-logo-sources.json. University dates are 2023 to 2026 and NEOM dates 2021 to 2026, displayed as the requested date ranges.
+
+Footer reads copyright 2026 Shahad Alharbi, with existing GitHub and Email links. No new projects, contact section, Udemy entry or motivational text were added.
+
+Earlier design records below describe superseded iterations.
+
 # Consistent project layout and website structure
 
 Checkpoint: 22dd97f. All six projects share the same 45/55 visual-left/content-right grid above 900px, and visual-first stacking below it. No project-specific full-width layouts remain.

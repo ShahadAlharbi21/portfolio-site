@@ -1,3 +1,6 @@
+import ProjectGallery from './ProjectGallery';
+import galleryStyles from './Kilburnazon.module.css';
+import KilburnazonGallery from './KilburnazonGallery';
 import { useRef } from 'react';
 import { projectImages } from './project-images';
 
@@ -16,17 +19,17 @@ function ProjectImage({ file, alt, label }) {
 }
 
 function NliVisual() {
-  return <div className="nli-research">
-    <p className="visual-note">Illustrative example</p>
-    <ol className="nli-process">
-      <li><h4>Premise</h4><p>Two people are sitting in a cafأ© talking.</p></li>
-      <li><h4>Hypothesis</h4><p>Two people are having a conversation.</p></li>
-      <li className="nli-inference"><h4>Inference</h4><p>Entailment</p></li>
-    </ol>
-    <dl className="nli-comparison" aria-label="Verified development-set Macro-F1 scores">
-      <div><dt>SVM <span>Macro-F1</span></dt><dd>0.6379</dd></div>
-      <div><dt>DeBERTa-v3-large <span>Macro-F1</span></dt><dd>0.9187</dd></div>
-    </dl>
+  return <div className="semantic-nli">
+    <p className="visual-note nli-example-note">Illustrative example, not a model prediction</p>
+    <div className="nli-sentences">
+      <div className="nli-sentence"><h4>Premise</h4><p>Two people are sitting in a café <span>talking</span>.</p></div>
+      <div className="nli-sentence"><h4>Hypothesis</h4><p>Two people are <span>having a conversation</span>.</p></div>
+    </div>
+    <div className="nli-prediction">
+      <h4>Prediction</h4>
+      <div className="nli-classes" aria-label="Binary classes; illustrative prediction: Entails (1)"><strong>Entails (1)</strong><span>Does Not Entail (0)</span></div>
+    </div>
+    <div className="nli-results"><p>Model comparison <span>Macro-F1</span></p><dl><div><dt>SVM</dt><dd>0.6379</dd></div><div><dt>DeBERTa-v3-large</dt><dd>0.9187</dd></div></dl></div>
   </div>;
 }
 
@@ -63,25 +66,23 @@ function MovieVisual() {
   </div>;
 }
 
+const hexImages = [
+  { file: 'hex/start.png', caption: 'Start', alt: 'Complete original terminal screenshot of the Hex opening board and first move, including command, headings and coordinates.' },
+  { file: 'hex/midgame.png', caption: 'Midgame', alt: 'Complete original terminal screenshot of Hex turns eight and nine with all board coordinates and log text.' },
+  { file: 'hex/later-game.png', caption: 'Later Game', alt: 'Complete original terminal screenshot of the later Hex game state, final board and game log.' },
+].map(image => ({ ...image, width: projectImages[image.file][0], height: projectImages[image.file][1] }));
+
 function HexVisual() {
-  return <div className="hex-progression">
-    <ProjectImage file="hex/start.png" alt="Complete original terminal screenshot of the Hex opening board and first move, including command, headings and coordinates." label="Start" />
-    <ProjectImage file="hex/midgame.png" alt="Complete original terminal screenshot of Hex turns eight and nine with all board coordinates and log text." label="Midgame" />
-    <ProjectImage file="hex/later-game.png" alt="Complete original terminal screenshot of the later Hex game state, final board and game log." label="Later Game" />
-  </div>;
+  return <ProjectGallery images={hexImages} label="Hex AI Agent screenshots" className={galleryStyles.hexGallery} />;
 }
 
 function EmployeeVisual() {
-  return <div className="employee-workflows">
-    <div className="workflow-title"><span>PHP / MySQL</span><h4>Employee Management</h4></div>
-    <div className="employee-capabilities"><div><span>01</span><h4>Employee records</h4><p>Search &amp; CRUD</p></div><div><span>02</span><h4>Leave requests</h4><p>Approval &amp; holiday tracking</p></div><div><span>03</span><h4>Payroll reporting</h4><p>PDF &amp; CSV exports</p></div></div>
-    <div className="archive-workflow"><span>Record deletion</span><i aria-hidden="true" /><span>MySQL trigger</span><i aria-hidden="true" /><span>Archive</span></div>
-  </div>;
+  return <KilburnazonGallery />;
 }
 
 function BookingVisual() {
   return <>
-    <svg className="booking-architecture" viewBox="0 0 440 300" role="img" aria-label="Client at top communicates with Hotel Service and Band Service. For each service a coral request arrow points from client to service, and a separate blue response arrow points from service to client.">
+    <svg className="booking-architecture" viewBox="0 0 440 300" role="img" aria-label="Client at top communicates with Hotel Service and Band Service. For each service a straight coral request arrow points from client to service, and a separate straight blue response arrow points from service to client.">
       <defs>
         <marker id="request-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#ed8d83" /></marker>
         <marker id="response-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9fbfd1" /></marker>
@@ -90,12 +91,12 @@ function BookingVisual() {
       <g className="service-icons"><path d="M164 35L171 41L164 47M176 47H187" /><path d="M22 269V245H44V269M18 269H48M28 250H31M36 250H39M28 257H31M36 257H39" /><path d="M264 266V244L281 240V262M264 247L281 243M264 265C256 260 253 271 260 270M281 261C273 256 270 267 277 266" /></g>
       <g fill="#f5f0e6" fontSize="18" textAnchor="middle"><text x="232" y="55">Client</text><text x="118" y="263">Hotel Service</text><text x="348" y="263">Band Service</text></g>
       <g fill="none" strokeWidth="1.5">
-        <path data-direction="request" d="M174 82C135 110 55 142 55 222" stroke="#ed8d83" markerEnd="url(#request-arrow)" />
-        <path data-direction="response" d="M125 222C125 159 203 132 203 83" stroke="#9fbfd1" markerEnd="url(#response-arrow)" />
-        <path data-direction="request" d="M266 82C305 110 385 142 385 222" stroke="#ed8d83" markerEnd="url(#request-arrow)" />
-        <path data-direction="response" d="M315 222C315 159 237 132 237 83" stroke="#9fbfd1" markerEnd="url(#response-arrow)" />
+        <line data-direction="request" x1="174" y1="82" x2="55" y2="222" stroke="#ed8d83" markerEnd="url(#request-arrow)" />
+        <line data-direction="response" x1="95" y1="222" x2="214" y2="82" stroke="#9fbfd1" markerEnd="url(#response-arrow)" />
+        <line data-direction="request" x1="266" y1="82" x2="385" y2="222" stroke="#ed8d83" markerEnd="url(#request-arrow)" />
+        <line data-direction="response" x1="345" y1="222" x2="226" y2="82" stroke="#9fbfd1" markerEnd="url(#response-arrow)" />
       </g>
-      <g fontSize="15"><text x="9" y="151" fill="#ed8d83">Request</text><text x="150" y="204" fontSize="14" fill="#9fbfd1">Response</text><text x="374" y="151" fill="#ed8d83">Request</text><text x="290" y="204" fontSize="14" textAnchor="end" fill="#9fbfd1">Response</text></g>
+      <g fontSize="15"><text x="48" y="146" fill="#ed8d83">Request</text><text x="153" y="174" fontSize="14" fill="#9fbfd1">Response</text><text x="330" y="146" fill="#ed8d83">Request</text><text x="287" y="174" fontSize="14" textAnchor="end" fill="#9fbfd1">Response</text></g>
     </svg>
     <div className="booking-support">
       <ProjectImage file="booking/main-menu.png" alt="Genuine Wedding Planner main menu, with booking and availability actions." />

@@ -9,17 +9,34 @@ import Footer from './components/Footer';
 
 export default function App() {
   useEffect(() => {
-    // Retain links shared before the page was consolidated.
-    const legacy = { '/about': 'about', '/projects': 'projects', '/certificates': 'certificates', '/contact': 'footer', contact: 'footer', work: 'projects' };
+    // The CV route opens the hero; plain section anchors keep in-page navigation.
+    const aliases = { contact: 'footer', work: 'projects' };
+    let mounted = true;
+    const previousRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = 'manual';
     function resolveAnchor() {
-      const target = legacy[window.location.hash.slice(1)];
-      if (!target) return;
-      window.history.replaceState(null, '', `#${target}`);
-      document.getElementById(target)?.scrollIntoView({ behavior: 'instant' });
+      if (window.location.hash.replace(/\/$/, '') === '#/about') {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        return;
+      }
+      const route = window.location.hash.slice(1).replace(/^\//, '').replace(/\/$/, '');
+      const target = aliases[route] || route;
+      if (target) document.getElementById(target)?.scrollIntoView({ behavior: 'instant' });
     }
-    resolveAnchor();
+    const frame = window.requestAnimationFrame(resolveAnchor);
+    const initialHash = window.location.hash;
+    document.fonts?.ready.then(() => {
+      if (mounted && window.location.hash === initialHash) resolveAnchor();
+    });
     window.addEventListener('hashchange', resolveAnchor);
-    return () => window.removeEventListener('hashchange', resolveAnchor);
+    window.addEventListener('pageshow', resolveAnchor);
+    return () => {
+      mounted = false;
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener('hashchange', resolveAnchor);
+      window.removeEventListener('pageshow', resolveAnchor);
+      window.history.scrollRestoration = previousRestoration;
+    };
   }, []);
 
   return <><a className="skip-link" href="#main-content">Skip to content</a><NavBar />
